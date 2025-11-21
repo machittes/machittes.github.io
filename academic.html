@@ -4,8 +4,53 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Academic Projects</title>
+
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+      .project-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+
+      .project-text {
+        flex: 1;
+        padding: 20px;
+        min-width: 300px;
+      }
+
+      .swiper {
+        width: 300px;
+        height: 620px;
+        margin-right: 40px;
+        border-radius: 16px;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      .project-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .project-title i {
+        margin-right: 6px;
+        color: #0d6efd;
+      }
+    </style>
   </head>
 
   <body id="page-top">
@@ -98,38 +143,235 @@
       </div>
     </section>
 
-    <!-- iOS Section -->
+
+
+
+
+
+
+    <!-- ======================= -->
+    <!--      IOS PROJECTS       -->
+    <!-- ======================= -->
+
     <section class="page-section bg-light" id="ios-projects">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-5">iOS Projects</h2>
 
-        <div class="row justify-content-center">
-          <!-- Add your iOS projects here -->
+        <!-- RENT APP -->
+        <div class="project-row">
+
+          <div class="swiper rent-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/ios/rent-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/rent-2.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/rent-3.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title">
+              <i class="fas fa-link"></i> Rent App
+            </div>
+
+            <p>(Academic) Rent App is a property rental management application that allows users to authenticate
+               and store data using Firebase.</p>
+
+            <h5>Technologies Used</h5>
+            <ul>
+              <li>Swift</li>
+              <li>SwiftUI</li>
+              <li>Firebase Authentication</li>
+              <li>Firebase Firestore</li>
+            </ul>
+
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
         </div>
+
+
+        <!-- BUCKIT -->
+        <div class="project-row">
+
+          <div class="swiper buckit-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-2.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-3.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-4.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-5.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-6.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/buckit-7.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title">
+              <i class="fas fa-link"></i> Buckit (video inside)
+            </div>
+
+            <p>(Academic) Buckit is a student expense tracking application that helps users manage their personal
+               finances by recording expenses, categorizing them, and keeping track of budgets.</p>
+
+            <h5>Technologies Used</h5>
+            <ul>
+              <li>Swift</li>
+              <li>SwiftUI</li>
+              <li>Firebase Authentication</li>
+              <li>Firebase Firestore</li>
+              <li>CoreData (local persistence)</li>
+            </ul>
+
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
+        </div>
+
+
+        <!-- COIN APP -->
+        <div class="project-row">
+
+          <div class="swiper coin-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/ios/coin-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/coin-2.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/ios/coin-3.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title">
+              <i class="fas fa-link"></i> Coin App
+            </div>
+
+            <p>(Academic) Coin App is a simple iOS application built with SwiftUI that displays a list of popular
+               cryptocurrencies using the CoinPaprika API.</p>
+
+            <h5>Technologies Used</h5>
+            <ul>
+              <li>SwiftUI</li>
+              <li>MVVM Architecture</li>
+              <li>CoinPaprika API</li>
+              <li>Alamofire</li>
+            </ul>
+
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Android Section -->
+
+
+
+
+    <!-- ======================= -->
+    <!--      ANDROID PROJECTS   -->
+    <!-- ======================= -->
+
     <section class="page-section" id="android-projects">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-5">Android Projects</h2>
 
-        <div class="row justify-content-center">
-          <!-- Add Android projects here -->
+        <!-- ANDROID PROJECT 1 -->
+        <div class="project-row">
+          <div class="swiper android1-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/android/android-app1-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/android/android-app1-2.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title"><i class="fas fa-link"></i> Android App 1</div>
+            <p>Generic text for Android App 1. Replace later.</p>
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
         </div>
+
+        <!-- ANDROID PROJECT 2 -->
+        <div class="project-row">
+          <div class="swiper android2-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/android/android-app2-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/android/android-app2-2.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title"><i class="fas fa-link"></i> Android App 2</div>
+            <p>Generic text for Android App 2. Replace later.</p>
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- React Native Section -->
+
+
+
+
+    <!-- ======================= -->
+    <!--      REACT NATIVE       -->
+    <!-- ======================= -->
+
     <section class="page-section bg-light" id="rn-projects">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-5">React Native Projects</h2>
 
-        <div class="row justify-content-center">
-          <!-- Add RN projects here -->
+        <!-- RN APP 1 -->
+        <div class="project-row">
+          <div class="swiper rn1-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app1-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app1-2.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app1-3.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app1-4.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app1-5.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app1-6.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title"><i class="fas fa-link"></i> React Native App 1</div>
+            <p>Generic text for React Native App 1. Replace later.</p>
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
         </div>
+
+        <!-- RN APP 2 -->
+        <div class="project-row">
+          <div class="swiper rn2-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app2-1.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app2-2.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app2-3.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app2-4.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app2-5.png"></div>
+              <div class="swiper-slide"><img src="assets/img/academic/rn/rn-app2-6.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="project-text">
+            <div class="project-title"><i class="fas fa-link"></i> React Native App 2</div>
+            <p>Generic text for React Native App 2. Replace later.</p>
+            <a href="#" target="_blank">GitHub Link</a>
+          </div>
+        </div>
+
       </div>
     </section>
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer text-center">
@@ -165,6 +407,20 @@
       <div class="container"><small>Copyright © Henrique Machitte 2025</small></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper Initialization -->
+<script>
+  new Swiper('.rent-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
+  new Swiper('.buckit-swiper',   { loop:true, pagination:{el:'.swiper-pagination'} });
+  new Swiper('.coin-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
+
+  new Swiper('.android1-swiper', { loop:true, pagination:{el:'.swiper-pagination'} });
+  new Swiper('.android2-swiper', { loop:true, pagination:{el:'.swiper-pagination'} });
+
+  new Swiper('.rn1-swiper',      { loop:true, pagination:{el:'.swiper-pagination'} });
+  new Swiper('.rn2-swiper',      { loop:true, pagination:{el:'.swiper-pagination'} });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
