@@ -22,12 +22,28 @@
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
         padding: 24px 20px;
         margin-bottom: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
 
-      /* Swiper dentro do card */
+      /* NEW layout: carousel + text side by side */
+      .project-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+        width: 100%;
+      }
+
+      .project-carousel {
+        flex: 1;
+        max-width: 320px;
+      }
+
+      .project-info {
+        flex: 1;
+        min-width: 260px;
+      }
+
+      /* Swiper inside the carousel wrapper */
       .swiper {
         width: 100%;
         max-width: 320px;
@@ -39,13 +55,9 @@
       .swiper-slide img {
         width: 100%;
         height: auto;
-        object-fit: contain;  /* prevents bottom cut */
+        object-fit: contain;
         border-radius: 16px;
-        background: #000;      /* fundo preto pra simular device */
-      }
-
-      .project-text {
-        width: 100%;
+        background: #000;
       }
 
       .project-title {
@@ -55,23 +67,23 @@
       }
 
       .project-title i,
-      .project-text a i {
+      .project-info a i {
         margin-right: 6px;
         color: #0d6efd;
       }
 
-      .project-text ul li {
+      .project-info ul li {
         margin-bottom: 4px;
       }
 
-      /* Deixa um pouco mais de respiro em telas menores */
-      @media (max-width: 767.98px) {
-        .project-card {
-          margin-bottom: 32px;
+      @media (max-width: 991px) {
+        .project-row {
+          flex-direction: column;
+          align-items: center;
         }
 
-        .swiper {
-          max-width: 100%;
+        .project-info {
+          width: 100%;
         }
       }
     </style>
@@ -110,7 +122,6 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
-
         <h1 class="masthead-heading text-uppercase mb-0 mt-5">Academic Projects</h1>
 
         <div class="divider-custom divider-light">
@@ -127,7 +138,7 @@
       </div>
     </header>
 
-    <!-- Icon Section -->
+    <!-- Technologies -->
     <section class="page-section" id="tech-icons">
       <div class="container text-center">
         <h2 class="page-section-heading text-uppercase text-secondary mb-5">Technologies</h2>
@@ -172,102 +183,114 @@
 
           <!-- BUCKIT -->
           <div class="col-md-6 project-card">
-            <div class="swiper buckit-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit1LoginScreen.PNG"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit2SplashScreen.PNG"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit3DashboardScreen.PNG"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit4Income&ExpenseScreen.PNG"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit5BudgetScreen.PNG"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit6ExportScreen.PNG"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit7AnalysisMonthlyLineScreen.PNG"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper buckit-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit1LoginScreen.PNG"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit2SplashScreen.PNG"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit3DashboardScreen.PNG"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit4Income&ExpenseScreen.PNG"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit5BudgetScreen.PNG"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit6ExportScreen.PNG"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/Buckit7AnalysisMonthlyLineScreen.PNG"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title">
-                Buckit
+              <div class="project-info">
+                <div class="project-title">Buckit</div>
+
+                <p>Buckit is a student expense tracking application that helps users manage their personal finances by recording expenses, categorizing them, and keeping track of budgets. It supports user authentication and data synchronization with Firebase.</p>
+
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>Swift</li>
+                  <li>SwiftUI</li>
+                  <li>Firebase Auth</li>
+                  <li>Firestore</li>
+                  <li>CoreData (local persistence)</li>
+                </ul>
+
+                <a href="https://github.com/machittes/Portfolio/tree/main/Student-Expense-TrackerP" target="_blank">
+                  <i class="fas fa-link"></i> Buckit Git-Link (video inside)
+                </a>
               </div>
 
-              <p>Buckit is a student expense tracking application that helps users manage their personal finances by recording expenses, categorizing them, and keeping track of budgets. It supports user authentication and data synchronization with Firebase.</p>
-
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>Swift</li>
-                <li>SwiftUI</li>
-                <li>Firebase Auth</li>
-                <li>Firestore</li>
-                <li>CoreData (local persistence)</li>
-              </ul>
-
-              <a href="https://github.com/machittes/Portfolio/tree/main/Student-Expense-TrackerP" target="_blank">
-                <i class="fas fa-link"></i> Buckit Git-Link (video inside)
-              </a>
             </div>
           </div>
 
           <!-- RENT APP -->
           <div class="col-md-6 project-card">
-            <div class="swiper rent-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/ios/RentApp01.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/RentApp02.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/RentApp03.png"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper rent-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/RentApp01.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/RentApp02.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/RentApp03.png"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title">
-                 Rent App
+              <div class="project-info">
+                <div class="project-title">Rent App</div>
+
+                <p>Rent App is a property rental management application that allows users to authenticate and store data using Firebase.</p>
+
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>Swift</li>
+                  <li>SwiftUI</li>
+                  <li>Firebase Auth</li>
+                  <li>Firestore</li>
+                </ul>
+
+                <a href="https://github.com/machittes/Portfolio/tree/main/AppRent" target="_blank">
+                  <i class="fas fa-link"></i> Rent App Git-Link
+                </a>
               </div>
 
-              <p>Rent App  is a property rental management application that allows users to authenticate and store data using Firebase.</p>
-
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>Swift</li>
-                <li>SwiftUI</li>
-                <li>Firebase Auth</li>
-                <li>Firestore</li>
-              </ul>
-
-              <a href="https://github.com/machittes/Portfolio/tree/main/AppRent" target="_blank">
-                <i class="fas fa-link"></i> Rent App Git-Link
-              </a>
             </div>
           </div>
 
           <!-- COIN APP -->
           <div class="col-md-6 project-card">
-            <div class="swiper coin-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/ios/CoinApp01.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/CoinApp02.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/ios/CoinApp03.png"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper coin-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/CoinApp01.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/CoinApp02.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/ios/CoinApp03.png"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title">
-                 Coin App
+              <div class="project-info">
+                <div class="project-title">Coin App</div>
+
+                <p>Coin App is a simple iOS application built with SwiftUI that displays a list of popular cryptocurrencies using the CoinPaprika API. Users can tap on any coin to view detailed information including its logo, name, symbol, start date, and hash algorithm.</p>
+
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>SwiftUI</li>
+                  <li>MVVM</li>
+                  <li>CoinPaprika API</li>
+                  <li>Alamofire</li>
+                </ul>
+
+                <a href="https://github.com/machittes/Portfolio/tree/main/CriptoCurrency" target="_blank">
+                  <i class="fas fa-link"></i> Coin App Git-Link
+                </a>
               </div>
 
-              <p>Coin App is a simple iOS application built with SwiftUI that displays a list of popular cryptocurrencies using the [CoinPaprika API](https://api.coinpaprika.com). Users can tap on any coin to view detailed information including its logo, name, symbol, start date, and hash algorithm.</p>
-
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>SwiftUI</li>
-                <li>MVVM</li>
-                <li>CoinPaprika API</li>
-                <li>Alamofire (for HTTP requests)</li>
-              </ul>
-
-              <a href="https://github.com/machittes/Portfolio/tree/main/CriptoCurrency" target="_blank">
-                <i class="fas fa-link"></i> Coin App Git-Link
-              </a>
             </div>
           </div>
 
@@ -275,10 +298,7 @@
       </div>
     </section>
 
-    <!-- ======================= -->
-    <!--      ANDROID PROJECTS   -->
-    <!-- ======================= -->
-
+    <!-- ANDROID PROJECTS -->
     <section class="page-section" id="android-projects">
       <div class="container">
 
@@ -288,66 +308,74 @@
 
           <!-- PIZZA ORDER -->
           <div class="col-md-6 project-card">
-            <div class="swiper pizza-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/android/PizzaOrder1.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/android/PizzaOder2.png"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper pizza-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/android/PizzaOrder1.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/android/PizzaOder2.png"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title">
-                 Pizza Order App
+              <div class="project-info">
+                <div class="project-title">Pizza Order App</div>
+
+                <p>Pizza Order App - A simple Android application that allows users to place pizza orders with selectable options. This project was developed as part of an early-stage learning experience in native Android development using Kotlin.</p>
+
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>Kotlin</li>
+                  <li>Android SDK</li>
+                  <li>XML Layouts</li>
+                  <li>JUnit</li>
+                  <li>Android Studio</li>
+                </ul>
+
+                <a href="https://github.com/machittes/Portfolio/tree/main/PIZZA_HENRIQUE" target="_blank">
+                  <i class="fas fa-link"></i> Pizza Order Git-Link
+                </a>
               </div>
 
-              <p>Pizza Order App - A simple Android application that allows users to place pizza orders with selectable options. This project was developed as part of an early-stage learning experience in native Android development using Kotlin.</p>
-
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>Kotlin</li>
-                <li>Android SDK - Core Android components and APIs</li>
-                <li>XML Layouts  – For UI structure</li>
-                <li>JUnit - For unit testing logic</li>
-                <li>Android Studio – IDE</li>
-              </ul>
-
-              <a href="https://github.com/machittes/Portfolio/tree/main/PIZZA_HENRIQUE" target="_blank">
-                <i class="fas fa-link"></i> Pizza Order Git-Link
-              </a>
             </div>
           </div>
 
           <!-- BOOKSTORE -->
           <div class="col-md-6 project-card">
-            <div class="swiper bookStore-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/android/BookStore1.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/android/BookStore2.png"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper bookStore-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/android/BookStore1.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/android/BookStore2.png"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title">
-                 BookStore App
+              <div class="project-info">
+                <div class="project-title">BookStore App</div>
+
+                <p>The BookStore App is a native Android application that allows users to manage a personal library. The app features a complete CRUD system using a local database.</p>
+
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>Kotlin</li>
+                  <li>Room Database</li>
+                  <li>Android SDK</li>
+                  <li>ViewModel + LiveData</li>
+                  <li>XML Layouts</li>
+                  <li>Android Studio</li>
+                </ul>
+
+                <a href="https://github.com/machittes/Portfolio/tree/main/BookStore" target="_blank">
+                  <i class="fas fa-link"></i> BookStore Git-Link
+                </a>
               </div>
 
-              <p>The BookStore App is a native Android application that allows users to manage a personal library. The app features a complete CRUD system (Create, Read, Update, Delete) using a local database. It was developed as part of a learning journey in native Android development with Kotlin and Jetpack components.</p>
-
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>Kotlin</li>
-                <li>Room Database – Local data persistence with SQLite support</li>
-                <li>Android SDK</li>
-                <li>ViewModel + LiveData – MVVM pattern implementation</li>
-                <li>XML Layouts – UI structure</li>
-                <li>Android Studio – IDE</li>
-              </ul>
-
-              <a href="https://github.com/machittes/Portfolio/tree/main/BookStore" target="_blank">
-                <i class="fas fa-link"></i> BookStore Git-Link
-              </a>
             </div>
           </div>
 
@@ -355,11 +383,7 @@
       </div>
     </section>
 
-
-    <!-- ======================= -->
-    <!--      RN PROJECTS        -->
-    <!-- ======================= -->
-
+    <!-- RN PROJECTS -->
     <section class="page-section bg-light" id="rn-projects">
       <div class="container">
 
@@ -369,77 +393,84 @@
 
           <!-- BOOK A ROOM -->
           <div class="col-md-6 project-card">
-            <div class="swiper bookARoom-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom1.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom2.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom3.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom4.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom5.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom6.png"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper bookARoom-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom1.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom2.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom3.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom4.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom5.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/BookARoom6.png"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title">
-                Book a Room
+              <div class="project-info">
+                <div class="project-title">Book a Room</div>
+
+                <p>Book a Room is a simple multi-screen mobile application built with React Native (Expo) for booking study rooms.</p>
+
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>React Native (Expo)</li>
+                  <li>React Navigation</li>
+                  <li>JavaScript</li>
+                </ul>
+
+                <a href="https://github.com/machittes/Portfolio/tree/main/book_room" target="_blank">
+                  <i class="fas fa-link"></i> Book a Room Git-Link
+                </a>
               </div>
 
-              <p>Book a Room. This is a simple multi-screen mobile application built with React Native (Expo) for booking study rooms on campus. It was developed as part of an academic assignment.</p>
-
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>React Native (Expo)</li>
-                <li>React Navigation (Native Stack)</li>
-                <li>JavaScript (function components, `let` and `const`)</li>
-              </ul>
-
-              <a href="https://github.com/machittes/Portfolio/tree/main/book_room" target="_blank">
-                <i class="fas fa-link"></i> Book a Room Git-Link
-              </a>
             </div>
           </div>
 
           <!-- CRYPTO -->
           <div class="col-md-6 project-card">
-            <div class="swiper crypto-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp1.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp2.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp3.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp4.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp5.png"></div>
-                <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp6.png"></div>
+            <div class="project-row">
+
+              <div class="project-carousel">
+                <div class="swiper crypto-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp1.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp2.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp3.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp4.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp5.png"></div>
+                    <div class="swiper-slide"><img src="assets/img/academic/rn/CryptoApp6.png"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
 
-            <div class="project-text">
-              <div class="project-title"> Crypto App</div>
+              <div class="project-info">
+                <div class="project-title">Crypto App</div>
 
-              <p>Crypto App built with React Native and Expo, showing real-time data from CoinLore API. Features include top 50 coin listings, detailed views, and a favorites system with Firebase integration.</p>
+                <p>Crypto App built with React Native and Expo, showing data from CoinLore API with favorites saved on Firebase.</p>
 
-              <h5>Technologies Used</h5>
-              <ul>
-                <li>React Native (Expo SDK 53)</li>
-                <li>Firebase Firestore</li>
-                <li>React Navigation</li>
-                <li>CoinLore REST API</li>
-                <li>React Native Vector Icons</li>
-                <li>Expo modules: gesture-handler, reanimated, safe-area-context</li>
-              </ul>
+                <h5>Technologies Used</h5>
+                <ul>
+                  <li>React Native (Expo SDK 53)</li>
+                  <li>Firebase Firestore</li>
+                  <li>React Navigation</li>
+                  <li>CoinLore REST API</li>
+                </ul>
 
-              <a href="https://github.com/machittes/Portfolio/tree/main/henrique_crypto" target="_blank">
-                <i class="fas fa-link"></i> Crypto App Git-Link
-              </a>
+                <a href="https://github.com/machittes/Portfolio/tree/main/henrique_crypto" target="_blank">
+                  <i class="fas fa-link"></i> Crypto App Git-Link
+                </a>
+              </div>
+
             </div>
           </div>
 
         </div>
       </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="footer text-center">
@@ -470,7 +501,6 @@
     <div class="copyright py-4 text-center text-white">
       <div class="container"><small>Copyright © Henrique Machitte 2025</small></div>
     </div>
-
 
     <!-- Swiper Initialization -->
     <script>
