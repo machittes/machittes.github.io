@@ -10,10 +10,45 @@
 
   <body id="page-top">
 
+    <!-- Navigation (same as home) -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+
+        <button
+          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+        >
+          Menu <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="personal.html">Personal Projects</a>
+            </li>
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="academic.html">Academic Projects</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
-        <h1 class="masthead-heading text-uppercase mb-0">Academic Projects</h1>
+
+        <h1 class="masthead-heading text-uppercase mb-0 mt-5">Academic Projects</h1>
 
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
@@ -22,7 +57,7 @@
         </div>
 
         <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px;">
-          Here you will find some of my academic projects, demonstrating the knowledge applied 
+          Here you will find some of my academic projects, demonstrating the knowledge applied
           to Mobile Applications, such as data persistence, API, location services and more.
         </p>
       </div>
@@ -37,19 +72,25 @@
 
           <!-- iOS -->
           <div class="col-6 col-md-4 mb-5">
-            <img src="assets/img/placeholder-ios.png" style="width: 120px;" alt="iOS Icon">
+            <a href="#ios-projects">
+              <img src="assets/img/portfolio/icon-ios.png" style="width: 120px;" alt="iOS Icon">
+            </a>
             <h4 class="text-uppercase text-secondary mt-3">iOS</h4>
           </div>
 
           <!-- Android -->
           <div class="col-6 col-md-4 mb-5">
-            <img src="assets/img/placeholder-android.png" style="width: 120px;" alt="Android Icon">
+            <a href="#android-projects">
+              <img src="assets/img/portfolio/icon-android.png" style="width: 120px;" alt="Android Icon">
+            </a>
             <h4 class="text-uppercase text-secondary mt-3">Android</h4>
           </div>
 
           <!-- React Native -->
           <div class="col-6 col-md-4 mb-5">
-            <img src="assets/img/placeholder-rn.png" style="width: 120px;" alt="React Native Icon">
+            <a href="#rn-projects">
+              <img src="assets/img/portfolio/icon-rn.png" style="width: 120px;" alt="React Native Icon">
+            </a>
             <h4 class="text-uppercase text-secondary mt-3">React Native</h4>
           </div>
 
@@ -63,7 +104,7 @@
         <h2 class="text-center text-uppercase text-secondary mb-5">iOS Projects</h2>
 
         <div class="row justify-content-center">
-          <!-- Add your iOS projects here later -->
+          <!-- Add your iOS projects here -->
         </div>
       </div>
     </section>
@@ -74,7 +115,7 @@
         <h2 class="text-center text-uppercase text-secondary mb-5">Android Projects</h2>
 
         <div class="row justify-content-center">
-          <!-- Add your Android projects here later -->
+          <!-- Add Android projects here -->
         </div>
       </div>
     </section>
@@ -85,16 +126,45 @@
         <h2 class="text-center text-uppercase text-secondary mb-5">React Native Projects</h2>
 
         <div class="row justify-content-center">
-          <!-- Add your RN projects here later -->
+          <!-- Add RN projects here -->
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer text-center">
-      <!-- same footer as index -->
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-4 mb-4">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">Toronto - Canada</p>
+          </div>
+
+          <div class="col-lg-4">
+            <h4 class="text-uppercase mb-4">Connect</h4>
+
+            <a class="btn btn-outline-light btn-social mx-1"
+               href="https://www.linkedin.com/in/henrique-machitte-0928767a/"
+               target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a class="btn btn-outline-light btn-social mx-1"
+               href="https://github.com/machittes/Portfolio"
+               target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <div class="copyright py-4 text-center text-white">
+      <div class="container"><small>Copyright © Henrique Machitte 2025</small></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
