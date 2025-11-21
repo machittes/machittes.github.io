@@ -15,17 +15,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
-      /* Adjust grid layout */
+      /* Card premium */
       .project-card {
-        margin-bottom: 60px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        padding: 24px 20px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
+      /* Swiper dentro do card */
       .swiper {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
         height: auto;
         border-radius: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       .swiper-slide img {
@@ -33,6 +41,11 @@
         height: auto;
         object-fit: contain;  /* prevents bottom cut */
         border-radius: 16px;
+        background: #000;      /* fundo preto pra simular device */
+      }
+
+      .project-text {
+        width: 100%;
       }
 
       .project-title {
@@ -47,8 +60,20 @@
         color: #0d6efd;
       }
 
-      .project-text ul li { margin-bottom: 4px; }
+      .project-text ul li {
+        margin-bottom: 4px;
+      }
 
+      /* Deixa um pouco mais de respiro em telas menores */
+      @media (max-width: 767.98px) {
+        .project-card {
+          margin-bottom: 32px;
+        }
+
+        .swiper {
+          max-width: 100%;
+        }
+      }
     </style>
   </head>
 
@@ -169,7 +194,11 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>Swift</li><li>SwiftUI</li><li>Firebase Auth</li><li>Firestore</li><li>CoreData</li>
+                <li>Swift</li>
+                <li>SwiftUI</li>
+                <li>Firebase Auth</li>
+                <li>Firestore</li>
+                <li>CoreData</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/Student-Expense-TrackerP" target="_blank">
@@ -198,7 +227,10 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>Swift</li><li>SwiftUI</li><li>Firebase Auth</li><li>Firestore</li>
+                <li>Swift</li>
+                <li>SwiftUI</li>
+                <li>Firebase Auth</li>
+                <li>Firestore</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/AppRent" target="_blank">
@@ -227,7 +259,10 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>SwiftUI</li><li>MVVM</li><li>CoinPaprika API</li><li>Alamofire</li>
+                <li>SwiftUI</li>
+                <li>MVVM</li>
+                <li>CoinPaprika API</li>
+                <li>Alamofire</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/CriptoCurrency" target="_blank">
@@ -270,7 +305,10 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>Kotlin</li><li>Android SDK</li><li>XML Layouts</li><li>JUnit</li>
+                <li>Kotlin</li>
+                <li>Android SDK</li>
+                <li>XML Layouts</li>
+                <li>JUnit</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/PIZZA_HENRIQUE" target="_blank">
@@ -298,7 +336,10 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>Kotlin</li><li>Room</li><li>MVVM</li><li>XML Layouts</li>
+                <li>Kotlin</li>
+                <li>Room</li>
+                <li>MVVM</li>
+                <li>XML Layouts</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/BookStore" target="_blank">
@@ -346,7 +387,9 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>React Native</li><li>React Navigation</li><li>JavaScript</li>
+                <li>React Native</li>
+                <li>React Navigation</li>
+                <li>JavaScript</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/book_room" target="_blank">
@@ -376,7 +419,9 @@
 
               <h5>Technologies Used</h5>
               <ul>
-                <li>React Native</li><li>Firebase</li><li>CoinLore API</li>
+                <li>React Native</li>
+                <li>Firebase</li>
+                <li>CoinLore API</li>
               </ul>
 
               <a href="https://github.com/machittes/Portfolio/tree/main/henrique_crypto" target="_blank">
@@ -422,19 +467,19 @@
 
 
     <!-- Swiper Initialization -->
-<script>
-  new Swiper('.rent-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
-  new Swiper('.buckit-swiper',   { loop:true, pagination:{el:'.swiper-pagination'} });
-  new Swiper('.coin-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
+    <script>
+      new Swiper('.rent-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.buckit-swiper',   { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.coin-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
 
-  new Swiper('.pizza-swiper',        { loop:true, pagination:{el:'.swiper-pagination'} });
-  new Swiper('.bookStore-swiper',    { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.pizza-swiper',        { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.bookStore-swiper',    { loop:true, pagination:{el:'.swiper-pagination'} });
 
-  new Swiper('.bookARoom-swiper',    { loop:true, pagination:{el:'.swiper-pagination'} });
-  new Swiper('.crypto-swiper',       { loop:true, pagination:{el:'.swiper-pagination'} });
-</script>
+      new Swiper('.bookARoom-swiper',    { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.crypto-swiper',       { loop:true, pagination:{el:'.swiper-pagination'} });
+    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
   </body>
 </html>
