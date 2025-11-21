@@ -10,10 +10,43 @@
 
   <body id="page-top">
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive">
+          Menu <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="personal.html">Personal Projects</a>
+            </li>
+
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="academic.html">Academic Projects</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
-        <h1 class="masthead-heading text-uppercase mb-0">Personal Projects</h1>
+
+        <h1 class="masthead-heading text-uppercase mb-0 mt-5">Personal Projects</h1>
 
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
@@ -22,14 +55,14 @@
         </div>
 
         <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px;">
-          Here you will find some of my personal projects, designed to explore creativity, challenge 
-          my skills,  and bring ideas to life through Swift, Kotlin, and React Native.
+          Here you will find some of my personal projects, designed to explore creativity,
+          challenge my skills, and bring ideas to life through Swift, Kotlin, and cross-platform tools.
         </p>
       </div>
     </header>
 
     <!-- Icon Section -->
-    <section class="page-section" id="tech-icons">
+    <section class="page-section" id="app-icons">
       <div class="container text-center">
         <h2 class="page-section-heading text-uppercase text-secondary mb-5">Apps</h2>
 
@@ -37,13 +70,17 @@
 
           <!-- TR3TA -->
           <div class="col-6 col-md-4 mb-5">
-            <img src="assets/img/placeholder-tr3ta.png" style="width: 130px;" alt="TR3TA Icon">
+            <a href="#tr3ta-projects">
+              <img src="assets/img/portfolio/icon-tr3ta.png" style="width: 130px;" alt="TR3TA Icon">
+            </a>
             <h4 class="text-uppercase text-secondary mt-3">TR3TA</h4>
           </div>
 
           <!-- NotixMe -->
           <div class="col-6 col-md-4 mb-5">
-            <img src="assets/img/placeholder-notix.png" style="width: 130px;" alt="NotixMe Icon">
+            <a href="#notix-projects">
+              <img src="assets/img/portfolio/icon-notix.png" style="width: 130px;" alt="NotixMe Icon">
+            </a>
             <h4 class="text-uppercase text-secondary mt-3">NotixMe</h4>
           </div>
 
@@ -57,7 +94,7 @@
         <h2 class="text-center text-uppercase text-secondary mb-5">TR3TA</h2>
 
         <div class="row justify-content-center">
-          <!-- Add TR3TA content later -->
+          <!-- TR3TA projects will go here -->
         </div>
       </div>
     </section>
@@ -68,16 +105,45 @@
         <h2 class="text-center text-uppercase text-secondary mb-5">NotixMe</h2>
 
         <div class="row justify-content-center">
-          <!-- Add NotixMe content later -->
+          <!-- NotixMe projects will go here -->
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer text-center">
-      <!-- same footer as index -->
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-4 mb-4">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">Toronto - Canada</p>
+          </div>
+
+          <div class="col-lg-4">
+            <h4 class="text-uppercase mb-4">Connect</h4>
+
+            <a class="btn btn-outline-light btn-social mx-1"
+               href="https://www.linkedin.com/in/henrique-machitte-0928767a/"
+               target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a class="btn btn-outline-light btn-social mx-1"
+               href="https://github.com/machittes/Portfolio"
+               target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <div class="copyright py-4 text-center text-white">
+      <div class="container"><small>Copyright © Henrique Machitte 2025</small></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
