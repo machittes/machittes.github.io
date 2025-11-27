@@ -55,7 +55,7 @@
         </div>
 
         <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px;">
-          Here is the spot for my personal projects, created to explore ideas, deepen my skills, and grow as a mobile developer. These apps reflect my journey from learning the fundamentals to building complete, real-world experiences. Projects like TR3TA and NotixMe showcase my focus on performance, clean architecture, and delivering intuitive user interactions.
+          Here is the spot for my personal projects, created to explore ideas, deepen my skills, and grow as a mobile developer. These apps reflect my journey from learning the fundamentals to building complete, real-world experiences.
         </p>
       </div>
     </header>
@@ -70,7 +70,7 @@
           <!-- TR3TA -->
           <div class="col-6 col-md-4 mb-5">
             <a href="#tr3ta-projects">
-              <img src="assets/img/portfolio/icon-tr3ta.png" style="width: 130px;" alt="TR3TA Icon">
+              <img src="assets/img/personal/treta/iconeTreta.png" style="width: 130px;" alt="TR3TA Icon">
             </a>
             <h4 class="text-uppercase text-secondary mt-3">TR3TA</h4>
           </div>
@@ -78,7 +78,7 @@
           <!-- NotixMe -->
           <div class="col-6 col-md-4 mb-5">
             <a href="#notix-projects">
-              <img src="assets/img/portfolio/icon-notix.png" style="width: 130px;" alt="NotixMe Icon">
+              <img src="assets/img/personal/notixme/iconeNotixMe.png" style="width: 130px;" alt="NotixMe Icon">
             </a>
             <h4 class="text-uppercase text-secondary mt-3">NotixMe</h4>
           </div>
@@ -90,22 +90,171 @@
     <!-- TR3TA Section -->
     <section class="page-section bg-light" id="tr3ta-projects">
       <div class="container">
+
         <h2 class="text-center text-uppercase text-secondary mb-5">TR3TA</h2>
 
-        <div class="row justify-content-center">
-          <!-- TR3TA projects will go here -->
+        <!-- Sneak Peek -->
+        <h3 class="text-center text-secondary mb-4">Sneek Peek</h3>
+
+        <!-- Carousel -->
+        <div id="tr3taCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+
+            <!-- VIDEO -->
+            <div class="carousel-item active">
+              <video controls style="max-width: 300px; border-radius: 10px;">
+                <source src="assets/img/personal/treta/video.mp4" type="video/mp4">
+              </video>
+            </div>
+
+            <!-- Screenshot placeholder -->
+            <div class="carousel-item">
+              <img src="assets/img/personal/treta/ss1.png"
+                   style="max-width: 300px; border-radius: 10px;">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/personal/treta/ss2.png"
+                   style="max-width: 300px; border-radius: 10px;">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#tr3taCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#tr3taCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
+
+        <!-- Description -->
+        <p class="text-center" style="max-width:700px; margin:auto;">
+          TR3TA is a strategy board game inspired by ancient battles between three factions competing for territory. This app version brings movement logic, turn control, animations, dice rolls, and a fully dynamic triangular board.
+        </p>
+
+        <!-- Timeline collapsible -->
+        <div class="mt-5 text-center">
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tr3taTimeline">
+            Development Timeline
+          </button>
+
+          <div class="collapse mt-3" id="tr3taTimeline">
+
+            <div style="white-space: nowrap; overflow-x: auto; padding-bottom: 15px;">
+
+              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
+                <img src="assets/img/personal/treta/step1.png" style="width:100%; border-radius:10px;">
+                <p>Initial Board Layout</p>
+              </div>
+
+              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
+                <img src="assets/img/personal/treta/step2.png" style="width:100%; border-radius:10px;">
+                <p>Movement Engine</p>
+              </div>
+
+              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
+                <img src="assets/img/personal/treta/step3.png" style="width:100%; border-radius:10px;">
+                <p>Dice + Turn Logic</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- NotixMe Section -->
     <section class="page-section" id="notix-projects">
       <div class="container">
+
         <h2 class="text-center text-uppercase text-secondary mb-5">NotixMe</h2>
 
-        <div class="row justify-content-center">
-          <!-- NotixMe projects will go here -->
+        <!-- Sneak Peek -->
+        <h3 class="text-center text-secondary mb-4">Sneek Peek</h3>
+
+        <!-- Carousel -->
+        <div id="notixCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+
+            <div class="carousel-item active">
+              <img src="assets/img/personal/notixme/ss1.png"
+                   style="max-width: 300px; border-radius: 10px;">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/personal/notixme/ss2.png"
+                   style="max-width: 300px; border-radius: 10px;">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button"
+                  data-bs-target="#notixCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button"
+                  data-bs-target="#notixCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
+
+        <!-- Description -->
+        <p class="text-center" style="max-width:700px; margin:auto;">
+          NotixMe is a customizable smart reminder app with advanced scheduling, snooze actions, recurring events, random alerts, status tracking, and a full long-term roadmap.
+        </p>
+
+        <!-- Features -->
+        <h4 class="text-uppercase text-secondary mt-5 mb-3 text-center">Planned Features</h4>
+        <ul style="max-width:700px; margin:auto;">
+          <li>Advanced scheduling engine</li>
+          <li>Random mode with minimum interval logic</li>
+          <li>Status system (Scheduled, In Progress, Completed)</li>
+          <li>Profiles / Context mode</li>
+          <li>Snooze with predefined intervals</li>
+          <li>Full recurrence logic</li>
+        </ul>
+
+        <!-- Technologies -->
+        <h4 class="text-uppercase text-secondary mt-4 mb-3 text-center">Technologies</h4>
+        <p class="text-center" style="max-width:700px; margin:auto;">
+          Swift, SwiftUI, UserNotifications, MVVM, UserDefaults, local scheduling.
+        </p>
+
+        <!-- Timeline collapsible -->
+        <div class="mt-5 text-center">
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#notixTimeline">
+            Development Timeline
+          </button>
+
+          <div class="collapse mt-3" id="notixTimeline">
+
+            <div style="white-space: nowrap; overflow-x: auto; padding-bottom: 15px;">
+
+              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
+                <img src="assets/img/personal/notixme/step1.png" style="width:100%; border-radius:10px;">
+                <p>Reminder System</p>
+              </div>
+
+              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
+                <img src="assets/img/personal/notixme/step2.png" style="width:100%; border-radius:10px;">
+                <p>Snooze Actions</p>
+              </div>
+
+              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
+                <img src="assets/img/personal/notixme/step3.png" style="width:100%; border-radius:10px;">
+                <p>Status Logic</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
