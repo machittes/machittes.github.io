@@ -6,6 +6,44 @@
     <title>Personal Projects</title>
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- TIMELINE CSS -->
+    <style>
+      .timeline-container {
+        display: flex;
+        gap: 40px;
+        overflow-x: auto;
+        padding: 20px 10px;
+        white-space: nowrap;
+        scrollbar-width: thin;
+      }
+
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 160px;
+      }
+
+      .timeline-dot {
+        width: 18px;
+        height: 18px;
+        background-color: #0d6efd;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .timeline-title {
+        font-weight: bold;
+        margin-bottom: 6px;
+        text-align: center;
+      }
+
+      .timeline-text {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body id="page-top">
@@ -129,14 +167,38 @@
           </button>
         </div>
 
-        <!-- Description -->
-        <p class="text-center" style="max-width:700px; margin:auto;">
-          Tr3ta is a board game created in 2010 (not yet released to the public) designed for three players. Each player commands one of three armies competing for control of the central region. The core gameplay blends D6-based movement with D12 combat resolution.
-The new app version stays true to the original mechanics but has been completely redesigned to deliver a more dynamic, vibrant, and intuitive digital experience. Beyond the main match, the game includes pre-game features such as mode selection, turn randomization, and customization options.
-During gameplay, players receive visual guidance showing possible movement paths, attack opportunities, and defensive positions—enhancing decision-making while preserving the strategic depth of the original board game.
-With local multiplayer support, up to three players can compete just like in the physical version, now enhanced with visual cues and accessibility features aimed at making the experience more inclusive.
-Scheduled for release in early 2026, Tr3ta is currently under active development. Feel free to explore the timeline and follow the evolution of this fully original project.
-        </p>
+        <!-- Description (justified + improved) -->
+        <div style="max-width:700px; margin:auto; text-align:justify;">
+
+          <p>
+            Tr3ta is a board game created in 2010 (not yet released to the public) designed for three players.
+            Each participant commands one of three armies competing for control of the central region.
+            The core gameplay blends D6-based movement with D12 combat resolution.
+          </p>
+
+          <p>
+            The new app version stays true to the original mechanics but has been completely redesigned
+            to deliver a more dynamic, vibrant, and intuitive digital experience. Beyond the main match,
+            the game includes pre-game features such as mode selection, turn randomization, and customization options.
+          </p>
+
+          <p>
+            During gameplay, players receive visual guidance showing possible movement paths, attack
+            opportunities, and defensive positions—enhancing decision-making while preserving the
+            strategic depth of the original board game.
+          </p>
+
+          <p>
+            With local multiplayer support, up to three players can compete just like in the physical version,
+            now enhanced with visual cues and accessibility features aimed at making the experience more inclusive.
+          </p>
+
+          <p>
+            Scheduled for release in early 2026, Tr3ta is currently under active development. Feel free to
+            explore the timeline and follow the evolution of this fully original project.
+          </p>
+
+        </div>
 
         <!-- Timeline collapsible -->
         <div class="mt-5 text-center">
@@ -144,23 +206,32 @@ Scheduled for release in early 2026, Tr3ta is currently under active development
             Development Timeline
           </button>
 
-          <div class="collapse mt-3" id="tr3taTimeline">
+          <div class="collapse mt-4" id="tr3taTimeline">
 
-            <div style="white-space: nowrap; overflow-x: auto; padding-bottom: 15px;">
+            <div class="timeline-container">
 
-              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
-                <img src="assets/img/personal/treta/step1.png" style="width:100%; border-radius:10px;">
-                <p>Initial Board Layout</p>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Game Concept</h6>
+                <p class="timeline-text">Original board game created in 2010.</p>
               </div>
 
-              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
-                <img src="assets/img/personal/treta/step2.png" style="width:100%; border-radius:10px;">
-                <p>Movement Engine</p>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Swift Prototype</h6>
+                <p class="timeline-text">First triangular board in SwiftUI.</p>
               </div>
 
-              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
-                <img src="assets/img/personal/treta/step3.png" style="width:100%; border-radius:10px;">
-                <p>Dice + Turn Logic</p>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Movement Engine</h6>
+                <p class="timeline-text">Movement logic & path validation.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Dice + Combat</h6>
+                <p class="timeline-text">D6 movement + D12 battle system.</p>
               </div>
 
             </div>
@@ -237,21 +308,24 @@ Scheduled for release in early 2026, Tr3ta is currently under active development
 
           <div class="collapse mt-3" id="notixTimeline">
 
-            <div style="white-space: nowrap; overflow-x: auto; padding-bottom: 15px;">
+            <div class="timeline-container">
 
-              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
-                <img src="assets/img/personal/notixme/step1.png" style="width:100%; border-radius:10px;">
-                <p>Reminder System</p>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Reminder System</h6>
+                <p class="timeline-text">Base scheduling logic working.</p>
               </div>
 
-              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
-                <img src="assets/img/personal/notixme/step2.png" style="width:100%; border-radius:10px;">
-                <p>Snooze Actions</p>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Snooze Actions</h6>
+                <p class="timeline-text">5–15 min quick actions.</p>
               </div>
 
-              <div style="display:inline-block; width:200px; margin-right:20px; text-align:center;">
-                <img src="assets/img/personal/notixme/step3.png" style="width:100%; border-radius:10px;">
-                <p>Status Logic</p>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Status System</h6>
+                <p class="timeline-text">Scheduled → In Progress → Completed.</p>
               </div>
 
             </div>
