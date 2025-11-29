@@ -4,28 +4,68 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Personal Projects</title>
+
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-    <!-- SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
+    <!-- TIMELINE + CARD LAYOUT CSS -->
     <style>
-      /* Card estilo Academic */
+      /* Timeline (mantido) */
+      .timeline-container {
+        display: flex;
+        gap: 40px;
+        overflow-x: auto;
+        padding: 20px 10px;
+        white-space: nowrap;
+        scrollbar-width: thin;
+      }
+
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 160px;
+      }
+
+      .timeline-dot {
+        width: 18px;
+        height: 18px;
+        background-color: #0d6efd;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .timeline-title {
+        font-weight: bold;
+        margin-bottom: 6px;
+        text-align: center;
+      }
+
+      .timeline-text {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      /* Card igual ao Academic */
       .project-card {
         background: #ffffff;
         border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
         padding: 24px 20px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
       }
 
       .project-row {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 40px;
+        gap: 30px;
         width: 100%;
       }
 
@@ -37,9 +77,9 @@
       .project-info {
         flex: 1;
         min-width: 260px;
-        text-align: justify;
       }
 
+      /* Swiper dentro do card */
       .swiper {
         width: 100%;
         max-width: 320px;
@@ -50,74 +90,63 @@
 
       .swiper-slide img {
         width: 100%;
+        height: auto;
         object-fit: contain;
         border-radius: 16px;
         background: #000;
       }
 
-      /* Timeline CSS (mantido) */
-      .timeline-container {
-        display: flex;
-        gap: 40px;
-        overflow-x: auto;
-        padding: 20px 10px;
-        white-space: nowrap;
-        scrollbar-width: thin;
-      }
-      .timeline-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 160px;
-      }
-      .timeline-dot {
-        width: 18px;
-        height: 18px;
-        background-color: #0d6efd;
-        border-radius: 50%;
+      .project-title {
+        font-size: 1.4rem;
+        font-weight: bold;
         margin-bottom: 10px;
       }
-      .timeline-title {
-        font-weight: bold;
-        margin-bottom: 6px;
-        text-align: center;
-      }
-      .timeline-text {
-        font-size: 0.9rem;
-        text-align: center;
+
+      @media (max-width: 991px) {
+        .project-row {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .project-info {
+          width: 100%;
+        }
       }
     </style>
   </head>
 
   <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">Portfolio</a>
 
-        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive">
+        <button
+          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+        >
           Menu <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
-
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Home</a>
             </li>
 
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="personal.html">Personal Projects</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="personal.html"
+                >Personal Projects</a
+              >
             </li>
 
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="academic.html">Academic Projects</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="academic.html"
+                >Academic Projects</a
+              >
             </li>
-
           </ul>
         </div>
       </div>
@@ -126,7 +155,6 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
-
         <h1 class="masthead-heading text-uppercase mb-0 mt-5">Personal Projects</h1>
 
         <div class="divider-custom divider-light">
@@ -136,233 +164,322 @@
         </div>
 
         <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px;">
-          Here is the spot for my personal projects, created to explore ideas, deepen my skills, and grow as a mobile developer.
+          Here is the spot for my personal projects, created to explore ideas, deepen my skills,
+          and grow as a mobile developer. These apps reflect my journey from learning the
+          fundamentals to building complete, real-world experiences.
         </p>
       </div>
     </header>
 
-
-    <!-- Icons Section (voltaram!) -->
+    <!-- Icon Section (mantido) -->
     <section class="page-section" id="app-icons">
       <div class="container text-center">
         <h2 class="page-section-heading text-uppercase text-secondary mb-5">Apps</h2>
 
         <div class="row justify-content-center">
-
+          <!-- TR3TA -->
           <div class="col-6 col-md-4 mb-5">
-            <a href="#tr3ta-section">
-              <img src="assets/img/personal/treta/iconeTreta.png" style="width: 130px;">
+            <a href="#tr3ta-projects">
+              <img
+                src="assets/img/personal/treta/iconeTreta.png"
+                style="width: 130px;"
+                alt="TR3TA Icon"
+              />
             </a>
             <h4 class="text-uppercase text-secondary mt-3">TR3TA</h4>
           </div>
 
+          <!-- NotixMe -->
           <div class="col-6 col-md-4 mb-5">
-            <a href="#notix-section">
-              <img src="assets/img/personal/notixme/iconeNotixMe1.png" style="width: 130px;">
+            <a href="#notix-projects">
+              <img
+                src="assets/img/personal/notixme/iconeNotixMe1.png"
+                style="width: 130px;"
+                alt="NotixMe Icon"
+              />
             </a>
             <h4 class="text-uppercase text-secondary mt-3">NotixMe</h4>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- ====================== -->
-    <!--        TR3TA CARD       -->
-    <!-- ====================== -->
-    <section class="page-section bg-light" id="tr3ta-section">
+    <!-- ======================= -->
+    <!--        TR3TA            -->
+    <!-- ======================= -->
+    <section class="page-section bg-light" id="tr3ta-projects">
       <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-5">TR3TA</h2>
 
-        <div class="project-card">
-          <h2 class="text-center text-uppercase text-secondary mb-4">TR3TA</h2>
-
-          <div class="project-row">
-
-            <!-- CAROUSEL -->
-            <div class="project-carousel">
-              <div class="swiper tr3ta-swiper">
-                <div class="swiper-wrapper">
-
-                  <div class="swiper-slide"><img src="assets/img/personal/treta/1treta.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/treta/2treta.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/treta/3treta.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/treta/4treta.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/treta/5treta.png"></div>
-
+        <div class="row justify-content-center">
+          <div class="col-lg-10 project-card">
+            <div class="project-row">
+              <!-- Carousel (apenas 5 prints, sem vídeo) -->
+              <div class="project-carousel">
+                <div class="swiper tr3ta-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/personal/treta/1treta.png" alt="TR3TA Screenshot 1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/personal/treta/2treta.png" alt="TR3TA Screenshot 2" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/personal/treta/3treta.png" alt="TR3TA Screenshot 3" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/personal/treta/4treta.png" alt="TR3TA Screenshot 4" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/personal/treta/5treta.png" alt="TR3TA Screenshot 5" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
+              </div>
+
+              <!-- Texto (justificado, preservando conteúdo) -->
+              <div class="project-info">
+                <div class="project-title">About TR3TA</div>
+
+                <p style="text-align: justify;">
+                  Tr3ta is a board game created in 2010 (not yet released to the public) designed
+                  for three players. Each participant commands one of three armies competing for
+                  control of the central region. The core gameplay blends D6-based movement with
+                  D12 combat resolution.
+                </p>
+
+                <p style="text-align: justify;">
+                  The new app version stays true to the original mechanics but has been completely
+                  redesigned to deliver a more dynamic, vibrant, and intuitive digital experience.
+                  Beyond the main match, the game includes pre-game features such as mode selection,
+                  turn randomization, and customization options.
+                </p>
+
+                <p style="text-align: justify;">
+                  During gameplay, players receive visual guidance showing possible movement paths,
+                  attack opportunities, and defensive positions—enhancing decision-making while
+                  preserving the strategic depth of the original board game.
+                </p>
+
+                <p style="text-align: justify;">
+                  With local multiplayer support, up to three players can compete just like in the
+                  physical version, now enhanced with visual cues and accessibility features aimed
+                  at making the experience more inclusive.
+                </p>
+
+                <p style="text-align: justify;">
+                  Scheduled for release in early 2026, Tr3ta is currently under active development.
+                  Feel free to explore the timeline and follow the evolution of this fully original
+                  project.
+                </p>
+
+                <!-- Botões: Timeline + Vídeo lado a lado -->
+                <div class="mt-4 text-center">
+                  <button
+                    class="btn btn-primary me-2"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#tr3taTimeline"
+                  >
+                    Development Timeline
+                  </button>
+
+                  <button
+                    class="btn btn-outline-primary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#tr3taVideo"
+                  >
+                    Watch Demo
+                  </button>
+                </div>
               </div>
             </div>
-
-            <!-- DESCRIPTION -->
-            <div class="project-info">
-              <p>
-                Tr3ta is a board game created in 2010 (not yet released to the public) designed for three players.
-                Each participant commands one of three armies competing for control of the central region.
-              </p>
-
-              <p>
-                The new app version stays true to the original mechanics but has been redesigned
-                to deliver a more dynamic and intuitive digital experience.
-              </p>
-
-              <p>
-                With local multiplayer support, path guidance, animations, and customizable rules,
-                the digital version aims to capture the original strategy while offering a modern interface.
-              </p>
-            </div>
-
           </div>
+        </div>
 
+        <!-- Timeline (mantida) + Vídeo em colapso separado -->
+        <div class="mt-4 text-center">
+          <div class="collapse mt-4" id="tr3taTimeline">
+            <div class="timeline-container">
+              <!-- C -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Concept</h6>
+                <p class="timeline-text">Original board game created in 2010.</p>
+              </div>
 
-          <!-- BUTTONS -->
-          <div class="mt-4 text-center">
+              <!-- A -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Swift Prototype</h6>
+                <p class="timeline-text">First triangular board in SwiftUI.</p>
+              </div>
 
-            <!-- VIDEO -->
-            <button class="btn btn-secondary me-3" type="button" data-bs-toggle="collapse" data-bs-target="#tr3taVideo">
-              Video Preview
-            </button>
+              <!-- A -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Movement Engine</h6>
+                <p class="timeline-text">Movement logic &amp; path validation.</p>
+              </div>
 
-            <!-- TIMELINE -->
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tr3taTimeline">
-              Development Timeline
-            </button>
-
-            <!-- VIDEO COLLAPSE -->
-            <div class="collapse mt-4" id="tr3taVideo">
-              <video controls style="max-width: 320px; border-radius: 12px;">
-                <source src="assets/img/personal/treta/TretaVideoDemo.mov" type="video/mp4">
-              </video>
-            </div>
-
-            <!-- TIMELINE COLLAPSE -->
-            <div class="collapse mt-4" id="tr3taTimeline">
-              <div class="timeline-container">
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Concept</h6>
-                  <p class="timeline-text">Original board game created in 2010.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Swift Prototype</h6>
-                  <p class="timeline-text">First triangular board in SwiftUI.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Movement Engine</h6>
-                  <p class="timeline-text">Movement logic & path validation.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Combat System</h6>
-                  <p class="timeline-text">D6 + D12 battle mechanics.</p>
-                </div>
-
+              <!-- A -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Dice + Combat</h6>
+                <p class="timeline-text">D6 movement + D12 battle system.</p>
               </div>
             </div>
-
           </div>
 
+          <!-- Video colapsável -->
+          <div class="collapse mt-4" id="tr3taVideo">
+            <video controls style="max-width: 700px; border-radius: 10px;">
+              <source
+                src="assets/img/personal/treta/TretaVideoDemo.mov"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </section>
 
-
-
-    <!-- ====================== -->
-    <!--       NOTIXME CARD     -->
-    <!-- ====================== -->
-    <section class="page-section" id="notix-section">
+    <!-- ======================= -->
+    <!--        NotixMe          -->
+    <!-- ======================= -->
+    <section class="page-section" id="notix-projects">
       <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-5">NotixMe</h2>
 
-        <div class="project-card">
-          <h2 class="text-center text-uppercase text-secondary mb-4">NotixMe</h2>
-
-          <div class="project-row">
-
-            <div class="project-carousel">
-              <div class="swiper notix-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="assets/img/personal/notixme/1NotixMe.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/notixme/2NotixMe.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/notixme/3NotixMe.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/notixme/4NotixMe.png"></div>
-                  <div class="swiper-slide"><img src="assets/img/personal/notixme/5NotixMe.png"></div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 project-card">
+            <div class="project-row">
+              <!-- Carousel NotixMe -->
+              <div class="project-carousel">
+                <div class="swiper notix-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/personal/notixme/1NotixMe.png"
+                        alt="NotixMe Screenshot 1"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/personal/notixme/2NotixMe.png"
+                        alt="NotixMe Screenshot 2"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/personal/notixme/3NotixMe.png"
+                        alt="NotixMe Screenshot 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/personal/notixme/4NotixMe.png"
+                        alt="NotixMe Screenshot 4"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/personal/notixme/5NotixMe.png"
+                        alt="NotixMe Screenshot 5"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-
-            <div class="project-info">
-              <p>
-                NotixMe is a customizable smart reminder app featuring advanced scheduling,
-                snooze actions, recurring events, random mode, and a long-term roadmap.
-              </p>
-
-              <p>
-                Built entirely in SwiftUI, the app focuses on robust logic and accessibility.
-              </p>
-
-              <p>
-                Upcoming upgrades include profiles/contexts, better UX animations,
-                and deeper recurrence logic.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="mt-4 text-center">
-
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#notixTimeline">
-              Development Timeline
-            </button>
-
-            <div class="collapse mt-4" id="notixTimeline">
-
-              <div class="timeline-container">
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Reminder System</h6>
-                  <p class="timeline-text">Base scheduling logic working.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Snooze Actions</h6>
-                  <p class="timeline-text">5–15 min quick actions.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <h6 class="timeline-title">Status System</h6>
-                  <p class="timeline-text">Full state workflow.</p>
-                </div>
-
               </div>
 
+              <!-- Texto NotixMe (descrição + features + tecnologias restaurados) -->
+              <div class="project-info">
+                <div class="project-title">About NotixMe</div>
+
+                <p class="text-center" style="max-width: 700px; margin: auto; text-align: justify;">
+                  NotixMe is a customizable smart reminder app with advanced scheduling, snooze
+                  actions, recurring events, random alerts, status tracking, and a full long-term
+                  roadmap.
+                </p>
+
+                <!-- Features -->
+                <h4
+                  class="text-uppercase text-secondary mt-4 mb-3 text-center"
+                  style="font-size: 1.1rem;"
+                >
+                  Planned Features
+                </h4>
+                <ul style="max-width: 700px; margin: auto;">
+                  <li>Advanced scheduling engine</li>
+                  <li>Random mode with minimum interval logic</li>
+                  <li>Status system (Scheduled, In Progress, Completed)</li>
+                  <li>Profiles / Context mode</li>
+                  <li>Snooze with predefined intervals</li>
+                  <li>Full recurrence logic</li>
+                </ul>
+
+                <!-- Technologies -->
+                <h4
+                  class="text-uppercase text-secondary mt-4 mb-3 text-center"
+                  style="font-size: 1.1rem;"
+                >
+                  Technologies
+                </h4>
+                <p class="text-center" style="max-width: 700px; margin: auto;">
+                  Swift, SwiftUI, UserNotifications, MVVM, UserDefaults, local scheduling.
+                </p>
+
+                <!-- Botão Timeline (mantido) -->
+                <div class="mt-4 text-center">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#notixTimeline"
+                  >
+                    Development Timeline
+                  </button>
+                </div>
+              </div>
             </div>
-
           </div>
-
         </div>
 
+        <!-- Timeline NotixMe -->
+        <div class="mt-3 text-center">
+          <div class="collapse mt-3" id="notixTimeline">
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Reminder System</h6>
+                <p class="timeline-text">Base scheduling logic working.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Snooze Actions</h6>
+                <p class="timeline-text">5–15 min quick actions.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h6 class="timeline-title">Status System</h6>
+                <p class="timeline-text">Scheduled → In Progress → Completed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
         <div class="row justify-content-center">
-
           <div class="col-lg-4 mb-4">
             <h4 class="text-uppercase mb-4">Location</h4>
             <p class="lead mb-0">Toronto - Canada</p>
@@ -371,18 +488,19 @@
           <div class="col-lg-4">
             <h4 class="text-uppercase mb-4">Connect</h4>
 
-            <a class="btn btn-outline-light btn-social mx-1"
-               href="https://www.linkedin.com/in/henrique-machitte-0928767a/"
-               target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://www.linkedin.com/in/henrique-machitte-0928767a/"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
 
-            <a class="btn btn-outline-light btn-social mx-1"
-               href="https://github.com/machittes/Portfolio"
-               target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://github.com/machittes/Portfolio"
+              target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -392,13 +510,22 @@
       <div class="container"><small>Copyright © Henrique Machitte 2025</small></div>
     </div>
 
-    <!-- SWIPER INIT -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Initialization -->
     <script>
-      new Swiper('.tr3ta-swiper', { loop:true, pagination:{ el:'.swiper-pagination' } });
-      new Swiper('.notix-swiper', { loop:true, pagination:{ el:'.swiper-pagination' } });
+      new Swiper(".tr3ta-swiper", {
+        loop: true,
+        pagination: { el: ".swiper-pagination" },
+      });
+
+      new Swiper(".notix-swiper", {
+        loop: true,
+        pagination: { el: ".swiper-pagination" },
+      });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
   </body>
 </html>
