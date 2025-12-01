@@ -6,7 +6,6 @@
     <title>Academic Projects</title>
     <link rel="icon" type="image/x-icon" href="assets/iconeH.png" />
 
-
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
@@ -26,7 +25,6 @@
         margin-bottom: 40px;
       }
 
-      /* NEW layout: carousel + text side by side */
       .project-row {
         display: flex;
         align-items: flex-start;
@@ -43,9 +41,9 @@
       .project-info {
         flex: 1;
         min-width: 260px;
+        text-align: justify; /* Justificar todos os textos */
       }
 
-      /* Swiper inside the carousel wrapper */
       .swiper {
         width: 100%;
         max-width: 320px;
@@ -83,7 +81,6 @@
           flex-direction: column;
           align-items: center;
         }
-
         .project-info {
           width: 100%;
         }
@@ -93,15 +90,13 @@
 
   <body id="page-top">
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">Portfolio</a>
 
-        <button
-          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
-          type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-        >
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
           Menu <i class="fas fa-bars"></i>
         </button>
 
@@ -110,9 +105,11 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Home</a>
             </li>
+
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="personal.html">Personal Projects</a>
             </li>
+
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="academic.html">Academic Projects</a>
             </li>
@@ -121,18 +118,20 @@
       </div>
     </nav>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
+
         <h1 class="masthead-heading text-uppercase mb-0 mt-5">Academic Projects</h1>
 
-        <div class="divider-custom divider-light">
-          <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-          <div class="divider-custom-line"></div>
+        <!-- DIVISOR H (1º) -->
+        <div class="h-divider">
+          <div class="h-line"></div>
+          <img src="assets/iconeH.png" class="h-icon">
+          <div class="h-line"></div>
         </div>
 
-        <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px;">
+        <p class="masthead-subheading font-weight-light mb-0" style="max-width:700px; text-align:justify;">
           Here you will find some of my academic projects, demonstrating the knowledge applied
           to Mobile Applications, such as data persistence, API, location services and more.
         </p>
@@ -140,30 +139,41 @@
       </div>
     </header>
 
-    <!-- Technologies -->
-    <section class="page-section" id="tech-icons">
+    <!-- TECHNOLOGIES SECTION (PASTEL GREEN) -->
+    <section class="page-section" id="tech-icons"
+             style="background: var(--pastel-green) !important;">
       <div class="container text-center">
-        <h2 class="page-section-heading text-uppercase text-secondary mb-5">Technologies</h2>
+
+        <h2 class="page-section-heading text-uppercase text-secondary mb-4">
+          Technologies
+        </h2>
+
+        <!-- DIVISOR H (2º) -->
+        <div class="h-divider mb-5">
+          <div class="h-line"></div>
+          <img src="assets/iconeH.png" class="h-icon">
+          <div class="h-line"></div>
+        </div>
 
         <div class="row justify-content-center">
 
           <div class="col-6 col-md-4 mb-5">
             <a href="#ios-projects">
-              <img src="assets/img/academic/apple.png" style="width: 120px;" alt="iOS Icon">
+              <img src="assets/img/academic/apple.png" style="width:120px;">
             </a>
             <h4 class="text-uppercase text-secondary mt-3">iOS</h4>
           </div>
 
           <div class="col-6 col-md-4 mb-5">
             <a href="#android-projects">
-              <img src="assets/img/academic/android.png" style="width: 120px;" alt="Android Icon">
+              <img src="assets/img/academic/android.png" style="width:120px;">
             </a>
             <h4 class="text-uppercase text-secondary mt-3">Android</h4>
           </div>
 
           <div class="col-6 col-md-4 mb-5">
             <a href="#rn-projects">
-              <img src="assets/img/academic/react.png" style="width: 120px;" alt="React Icon">
+              <img src="assets/img/academic/react.png" style="width:120px;">
             </a>
             <h4 class="text-uppercase text-secondary mt-3">React Native</h4>
           </div>
@@ -172,18 +182,16 @@
       </div>
     </section>
 
-    <!-- ======================= -->
-    <!--      IOS PROJECTS       -->
-    <!-- ======================= -->
-
-    <section class="page-section bg-light" id="ios-projects">
+    <!-- iOS PROJECTS (YELLOW) -->
+    <section class="page-section" id="ios-projects"
+             style="background: var(--pastel-yellow) !important;">
       <div class="container">
 
         <h2 class="text-center text-uppercase text-secondary mb-5">iOS Projects</h2>
 
         <div class="row">
 
-          <!-- BUCKIT -->
+          <!-- BUCKIT CARD -->
           <div class="col-md-6 project-card">
             <div class="project-row">
 
@@ -205,7 +213,7 @@
               <div class="project-info">
                 <div class="project-title">Buckit</div>
 
-                <p>Buckit is a student expense tracking application that helps users manage their personal finances by recording expenses, categorizing them, and keeping track of budgets. It supports user authentication and data synchronization with Firebase.</p>
+                <p>Buckit is a student expense tracking application that helps users manage personal finances...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
@@ -213,7 +221,7 @@
                   <li>SwiftUI</li>
                   <li>Firebase Auth</li>
                   <li>Firestore</li>
-                  <li>CoreData (local persistence)</li>
+                  <li>CoreData</li>
                 </ul>
 
                 <a href="https://github.com/machittes/Portfolio/tree/main/Student-Expense-TrackerP" target="_blank">
@@ -242,11 +250,10 @@
               <div class="project-info">
                 <div class="project-title">Rent App</div>
 
-                <p>Rent App is a property rental management application that allows users to authenticate and store data using Firebase.</p>
+                <p>Rent App is a Firebase-based rental management application...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
-                  <li>Swift</li>
                   <li>SwiftUI</li>
                   <li>Firebase Auth</li>
                   <li>Firestore</li>
@@ -278,14 +285,14 @@
               <div class="project-info">
                 <div class="project-title">Coin App</div>
 
-                <p>Coin App is a simple iOS application built with SwiftUI that displays a list of popular cryptocurrencies using the CoinPaprika API. Users can tap on any coin to view detailed information including its logo, name, symbol, start date, and hash algorithm.</p>
+                <p>Coin App displays cryptocurrency information using the CoinPaprika API...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
                   <li>SwiftUI</li>
                   <li>MVVM</li>
-                  <li>CoinPaprika API</li>
                   <li>Alamofire</li>
+                  <li>CoinPaprika API</li>
                 </ul>
 
                 <a href="https://github.com/machittes/Portfolio/tree/main/CriptoCurrency" target="_blank">
@@ -300,15 +307,16 @@
       </div>
     </section>
 
-    <!-- ANDROID PROJECTS -->
-    <section class="page-section" id="android-projects">
+    <!-- ANDROID PROJECTS (BLUE) -->
+    <section class="page-section" id="android-projects"
+             style="background: var(--pastel-blue) !important;">
       <div class="container">
 
         <h2 class="text-center text-uppercase text-secondary mb-5">Android Projects</h2>
 
         <div class="row">
 
-          <!-- PIZZA ORDER -->
+          <!-- PIZZA -->
           <div class="col-md-6 project-card">
             <div class="project-row">
 
@@ -325,15 +333,13 @@
               <div class="project-info">
                 <div class="project-title">Pizza Order App</div>
 
-                <p>Pizza Order App - A simple Android application that allows users to place pizza orders with selectable options. This project was developed as part of an early-stage learning experience in native Android development using Kotlin.</p>
+                <p>A Kotlin-based app for ordering pizzas...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
                   <li>Kotlin</li>
                   <li>Android SDK</li>
-                  <li>XML Layouts</li>
                   <li>JUnit</li>
-                  <li>Android Studio</li>
                 </ul>
 
                 <a href="https://github.com/machittes/Portfolio/tree/main/PIZZA_HENRIQUE" target="_blank">
@@ -361,16 +367,13 @@
               <div class="project-info">
                 <div class="project-title">BookStore App</div>
 
-                <p>The BookStore App is a native Android application that allows users to manage a personal library. The app features a complete CRUD system using a local database.</p>
+                <p>A CRUD application using Room Database...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
                   <li>Kotlin</li>
-                  <li>Room Database</li>
-                  <li>Android SDK</li>
-                  <li>ViewModel + LiveData</li>
-                  <li>XML Layouts</li>
-                  <li>Android Studio</li>
+                  <li>Room</li>
+                  <li>ViewModel</li>
                 </ul>
 
                 <a href="https://github.com/machittes/Portfolio/tree/main/BookStore" target="_blank">
@@ -385,8 +388,9 @@
       </div>
     </section>
 
-    <!-- RN PROJECTS -->
-    <section class="page-section bg-light" id="rn-projects">
+    <!-- RN PROJECTS (GREEN AGAIN) -->
+    <section class="page-section" id="rn-projects"
+             style="background: var(--pastel-green) !important;">
       <div class="container">
 
         <h2 class="text-center text-uppercase text-secondary mb-5">React Native Projects</h2>
@@ -414,13 +418,12 @@
               <div class="project-info">
                 <div class="project-title">Book a Room</div>
 
-                <p>Book a Room is a simple multi-screen mobile application built with React Native (Expo) for booking study rooms.</p>
+                <p>React Native app for booking study rooms...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
                   <li>React Native (Expo)</li>
                   <li>React Navigation</li>
-                  <li>JavaScript</li>
                 </ul>
 
                 <a href="https://github.com/machittes/Portfolio/tree/main/book_room" target="_blank">
@@ -431,7 +434,7 @@
             </div>
           </div>
 
-          <!-- CRYPTO -->
+          <!-- CRYPTO APP -->
           <div class="col-md-6 project-card">
             <div class="project-row">
 
@@ -452,14 +455,13 @@
               <div class="project-info">
                 <div class="project-title">Crypto App</div>
 
-                <p>Crypto App built with React Native and Expo, showing data from CoinLore API with favorites saved on Firebase.</p>
+                <p>Crypto App built with Expo and Firebase...</p>
 
                 <h5>Technologies Used</h5>
                 <ul>
-                  <li>React Native (Expo SDK 53)</li>
+                  <li>React Native</li>
                   <li>Firebase Firestore</li>
-                  <li>React Navigation</li>
-                  <li>CoinLore REST API</li>
+                  <li>CoinLore API</li>
                 </ul>
 
                 <a href="https://github.com/machittes/Portfolio/tree/main/henrique_crypto" target="_blank">
@@ -474,7 +476,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer text-center">
       <div class="container">
         <div class="row justify-content-center">
@@ -504,17 +506,17 @@
       <div class="container"><small>Copyright © Henrique Machitte 2025</small></div>
     </div>
 
-    <!-- Swiper Initialization -->
+    <!-- Swiper Init -->
     <script>
       new Swiper('.rent-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
       new Swiper('.buckit-swiper',   { loop:true, pagination:{el:'.swiper-pagination'} });
       new Swiper('.coin-swiper',     { loop:true, pagination:{el:'.swiper-pagination'} });
 
-      new Swiper('.pizza-swiper',        { loop:true, pagination:{el:'.swiper-pagination'} });
-      new Swiper('.bookStore-swiper',    { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.pizza-swiper',       { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.bookStore-swiper',   { loop:true, pagination:{el:'.swiper-pagination'} });
 
-      new Swiper('.bookARoom-swiper',    { loop:true, pagination:{el:'.swiper-pagination'} });
-      new Swiper('.crypto-swiper',       { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.bookARoom-swiper',   { loop:true, pagination:{el:'.swiper-pagination'} });
+      new Swiper('.crypto-swiper',      { loop:true, pagination:{el:'.swiper-pagination'} });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
