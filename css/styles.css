@@ -11205,3 +11205,19 @@ footer.footer {
   border-bottom: 1px solid #D6D6DA !important; /* cria delimitação */
 }
 
+/* NAVBAR — mesma cor do copyright */
+#mainNav {
+  background: #AFAFB5 !important;   /* mesmo cinza do copyright */
+  color: #1C1C1E !important;
+  border-bottom: 1px solid #9C9CA3 !important; /* linha de separação suave */
+}
+
+#mainNav .nav-link {
+  color: #1C1C1E !important;
+}
+
+#mainNav .nav-link:hover {
+  color: #000000 !important;
+}
+
+
