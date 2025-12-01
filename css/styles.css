@@ -11060,23 +11060,23 @@ html {
   --text-sub: #6E6E73;
 }
 
-/* ========= HEADER (Gradiente Treta) ========= */
+/* ========= HEADER (Gradiente Treta, mais contraste) ========= */
 header.masthead {
   background: linear-gradient(
     180deg,
-    var(--pastel-blue) 0%,
-    var(--pastel-green) 50%,
-    var(--pastel-yellow) 100%
+    #B3C7FF 0%,   /* azul pastel mais forte */
+    #C6F5DD 50%,  /* verde pastel mais forte */
+    #FFD96A 100%  /* amarelo pastel mais forte */
   ) !important;
   color: var(--text-main) !important;
 }
 
 header.masthead .masthead-heading {
-  color: var(--text-main) !important;
+  color: #111111 !important;
 }
 
 header.masthead .masthead-subheading {
-  color: var(--text-sub) !important;
+  color: #2C2C2E !important;
 }
 
 /* ========= PORTFOLIO SECTION ========= */
@@ -11116,12 +11116,18 @@ header.masthead .masthead-subheading {
 
 /* ========= FOOTER ========= */
 footer.footer {
-  background: var(--apple-gray) !important;
+  background: #D1D1D6 !important; /* cinza um pouco mais escuro que o apple_gray */
   color: var(--text-main) !important;
 }
 
 footer.footer p.lead {
   color: var(--text-main) !important;
+}
+
+/* ========= COPYRIGHT STRIP ========= */
+.copyright {
+  background: #C7C7CC !important; /* um tom abaixo do footer, pra destacar */
+  color: #1C1C1E !important;
 }
 
 /* ========= Remover estrelas ========= */
@@ -11130,6 +11136,7 @@ footer.footer p.lead {
 .divider-custom-icon {
   display: none !important;
 }
+
 /* ===== NAVBAR PASTEL LIGHT ===== */
 #mainNav {
   background: #F5F5F7 !important; /* cinza Apple */
@@ -11144,11 +11151,7 @@ footer.footer p.lead {
 #mainNav .nav-link:hover {
   color: #1C1C1E !important;
 }
-/* ===== COPYRIGHT FOOTER LIGHT ===== */
-.copyright {
-  background: #F5F5F7 !important; /* mesmo fundo do footer */
-  color: #1C1C1E !important;
-}
+
 /* ===== HENRIQUE DIVIDER (iconeH) ===== */
 
 .h-divider {
@@ -11162,34 +11165,13 @@ footer.footer p.lead {
 .h-divider .h-line {
   height: 1px;
   width: 100px;
-  background-color: #D1D1D6; /* cinza Apple leve */
+  background-color: #A1A1A6; /* cinza intermediário (visível, mas não berrante) */
 }
 
 .h-divider .h-icon {
   width: 22px;
   height: 22px;
   opacity: 0.9;
-}
-
-/* ===== Ajustar divisor ===== */
-.h-divider .h-line {
-  background-color: #A1A1A6 !important; /* cinza mais escuro */
-}
-
-/* ===== Header e footer final mais sólidos ===== */
-header.masthead {
-  background: linear-gradient(
-    180deg,
-    #E8F1FF 0%,
-    #F3FFF8 50%,
-    #FFF9E2 100%
-  ) !important;
-}
-
-footer.footer,
-.copyright {
-  background: #F5F5F7 !important; /* sólido e claro */
-  color: #1C1C1E !important;
 }
 
 /* ===== Remover seleção verde do menu ===== */
@@ -11201,34 +11183,3 @@ footer.footer,
   box-shadow: none !important;
 }
 
-.navbar-nav .nav-link:hover {
-  background: rgba(0,0,0,0.05) !important; /* hover leve */
-}
-
-/* HEADER PASTEL MAIS FORTE */
-header.masthead {
-  background: linear-gradient(
-    180deg,
-    #DDE7FF 0%,    /* azul pastel mais forte */
-    #EAFEF4 50%,   /* verde pastel mais forte */
-    #FFF4CF 100%   /* amarelo pastel mais forte */
-  ) !important;
-}
-/* FOOTER MAIS ESCURO */
-footer.footer,
-.copyright {
-  background: #E1E1E5 !important; /* cinza Apple mais escuro */
-  color: #1C1C1E !important;
-}
-/* DIVISOR GROSSO + PRETO */
-.h-divider .h-line {
-  height: 2px !important;
-  width: 110px;
-  background-color: #000000 !important;
-}
-
-.h-divider .h-icon {
-  width: 24px;
-  height: 24px;
-  opacity: 1; /* ícone mais visível */
-}
