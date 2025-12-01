@@ -11205,3 +11205,30 @@ footer.footer,
   background: rgba(0,0,0,0.05) !important; /* hover leve */
 }
 
+/* HEADER PASTEL MAIS FORTE */
+header.masthead {
+  background: linear-gradient(
+    180deg,
+    #DDE7FF 0%,    /* azul pastel mais forte */
+    #EAFEF4 50%,   /* verde pastel mais forte */
+    #FFF4CF 100%   /* amarelo pastel mais forte */
+  ) !important;
+}
+/* FOOTER MAIS ESCURO */
+footer.footer,
+.copyright {
+  background: #E1E1E5 !important; /* cinza Apple mais escuro */
+  color: #1C1C1E !important;
+}
+/* DIVISOR GROSSO + PRETO */
+.h-divider .h-line {
+  height: 2px !important;
+  width: 110px;
+  background-color: #000000 !important;
+}
+
+.h-divider .h-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 1; /* ícone mais visível */
+}
