@@ -11171,3 +11171,37 @@ footer.footer p.lead {
   opacity: 0.9;
 }
 
+/* ===== Ajustar divisor ===== */
+.h-divider .h-line {
+  background-color: #A1A1A6 !important; /* cinza mais escuro */
+}
+
+/* ===== Header e footer final mais sólidos ===== */
+header.masthead {
+  background: linear-gradient(
+    180deg,
+    #E8F1FF 0%,
+    #F3FFF8 50%,
+    #FFF9E2 100%
+  ) !important;
+}
+
+footer.footer,
+.copyright {
+  background: #F5F5F7 !important; /* sólido e claro */
+  color: #1C1C1E !important;
+}
+
+/* ===== Remover seleção verde do menu ===== */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-nav .nav-link:hover {
+  background: rgba(0,0,0,0.05) !important; /* hover leve */
+}
+
