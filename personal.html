@@ -17,175 +17,178 @@
 
     <!-- ESTILOS ESPECÍFICOS DA PÁGINA PERSONAL -->
     <style>
-      /* Card igual ao Academic */
-      .project-card {
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-        padding: 32px 32px;
-        margin-bottom: 40px;
-      }
+  /* Card igual ao Academic */
+  .project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    padding: 32px 32px;
+    margin-bottom: 40px;
+  }
 
-      .project-row {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 50px;
-        width: 100%;
-      }
+  .project-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+  }
 
-      .project-carousel {
-        flex: 1;
-        max-width: 320px;
-      }
+  .project-carousel {
+    flex: 1;
+    max-width: 320px;
+  }
 
-      .project-info {
-        flex: 1;
-        min-width: 260px;
-      }
+  .project-info {
+    flex: 1;
+    min-width: 260px;
+  }
 
-      /* Swiper */
-      .swiper {
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-        border-radius: 16px;
-        margin-bottom: 18px;
-      }
+  /* Swiper */
+  .swiper {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 18px;
+  }
 
-      .swiper-slide img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        border-radius: 16px;
-        background: #000;
-      }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    background: #000;
+  }
 
-      .project-title {
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
+  .project-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
-      @media (max-width: 991px) {
-        .project-row {
-          flex-direction: column;
-          align-items: center;
-        }
+  @media (max-width: 991px) {
+    .project-row {
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .project-info {
-          width: 100%;
-        }
-      }
+    .project-info {
+      width: 100%;
+    }
+  }
 
-      /* Timeline genérica (para TR3TA e NotixMe) */
-      .timeline-outer {
-        margin-top: 20px;
-      }
+  /* ========================= TIMELINE ========================= */
 
-      .timeline-container {
-        position: relative;
-        display: flex;
-        gap: 40px;
-        overflow-x: auto;
-        padding: 20px 10px 30px 10px;
-        white-space: nowrap;
-        scrollbar-width: thin;
-      }
+  .timeline-outer {
+    margin-top: 20px;
+  }
 
-      /* Linha horizontal ligando os pontos */
-      .timeline-container::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 56px; /* alinhamento com os dots */
-        height: 2px;
-        background-color: rgba(13, 110, 253, 0.35);
-        z-index: 0;
-      }
+  .timeline-container {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 20px 10px 30px 10px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
 
-      .timeline-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 180px;
-        z-index: 1;
-      }
+  /* Linha azul */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px; /* Ajustado */
+    height: 2px;
+    background-color: rgba(13, 110, 253, 0.35);
+    z-index: 0;
+  }
 
-      .timeline-date {
-        font-weight: bold;
-        margin-bottom: 6px;
-        text-align: center;
-        font-size: 0.9rem;
-      }
+  .timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* aumentado */
+    z-index: 1;
+  }
 
-      .timeline-dot {
-        width: 18px;
-        height: 18px;
-        background-color: #0d6efd;
-        border-radius: 50%;
-        margin-bottom: 8px;
-      }
+  .timeline-date {
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
 
-      .timeline-label {
-        border: none;
-        background: none;
-        color: #0d6efd;
-        font-weight: 600;
-        font-size: 0.9rem;
-        cursor: pointer;
-        text-align: center;
-        padding: 0;
-      }
+  .timeline-dot {
+    width: 18px;
+    height: 18px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    margin-bottom: 8px;
+  }
 
-      .timeline-card {
-  display: none;
-  margin-top: 14px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  padding: 14px 16px;
-  text-align: left;
-  max-width: 280px;      /* novo */
-  word-wrap: break-word; /* novo */
-  overflow-wrap: break-word; /* novo */
-}
+  /* Títulos da timeline */
+  .timeline-label {
+    border: none;
+    background: none;
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    white-space: normal; /* agora quebra */
+    line-height: 1.2;
+    max-width: 180px;
+  }
 
-      .timeline-card.active {
-        display: block;
-      }
+  /* Card */
+  .timeline-card {
+    display: none;
+    margin-top: 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    padding: 14px 16px;
+    text-align: left;
+    max-width: 280px;
+    position: relative;
+    z-index: 10 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 
-      .timeline-card-title {
-        font-weight: bold;
-        margin-bottom: 6px;
-      }
+  .timeline-card.active {
+    display: block;
+  }
 
-      .timeline-card p {
-        font-size: 0.9rem;
-        margin-bottom: 0;
-        text-align: justify;
-      }
+  .timeline-card-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
 
-      /* Permitir quebra nos títulos */
-.timeline-label {
-  white-space: normal;   /* antes era fixed */
-  line-height: 1.2;      /* deixa mais compacto */
-  max-width: 180px;      /* garante limite */
-}
+  .timeline-card-text {
+    max-width: 260px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 
-/* Aumentar levemente o espaço entre os itens */
-.timeline-item {
-  width: 200px;     /* antes era 180px */
-}
+  .timeline-card p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    text-align: justify;
+  }
 
-/* Linha horizontal fica mais alinhada com os dots */
-.timeline-container::before {
-  top: 60px; /* pequeno ajuste para compensar o novo tamanho */
-}
+  /* Permitir expansão total no collapse */
+  #tr3taTimeline,
+  #notixTimeline {
+    overflow: visible !important;
+  }
+</style>
 
-    </style>
   </head>
 
   <body id="page-top">
