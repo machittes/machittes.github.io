@@ -11220,4 +11220,30 @@ footer.footer {
   color: #000000 !important;
 }
 
+/* ===== Reforçar a espessura da H-divider ===== */
+.h-divider .h-line {
+  height: 2.5px !important;   /* linha mais grossa */
+  width: 110px !important;
+  background-color: #000000 !important; /* preta */
+}
+
+.h-divider .h-icon {
+  width: 24px !important;
+  height: 24px !important;
+  opacity: 1 !important;
+}
+
+
+/* ===== Ajustar espaçamento da sessão CONTACT ===== */
+#contact .page-section-heading {
+  margin-top: 0 !important;
+  margin-bottom: 40px !important;  /* igual às outras seções */
+}
+
+#contact .container {
+  padding-top: 60px !important;    /* mesmo padrão do About */
+  padding-bottom: 80px !important;
+}
+
+
 
