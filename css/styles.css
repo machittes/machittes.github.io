@@ -11045,29 +11045,89 @@ html {
   background-color: #1a252f;
 }
 
-/* ====== HENRIQUE CUSTOM THEME ====== */
+/* ================================
+   HENRIQUE PASTEL THEME
+   ================================ */
 
-/* Gradiente Treta Pastel só no header */
+/* PALETA */
+:root {
+  --pastel-blue: #E8F1FF;
+  --pastel-green: #F3FFF8;
+  --pastel-yellow: #FFF9E2;
+  --apple-gray: #F5F5F7;
+
+  --text-main: #1C1C1E;
+  --text-sub: #6E6E73;
+}
+
+/* ========= HEADER (Gradiente Treta) ========= */
 header.masthead {
   background: linear-gradient(
     180deg,
-    #E8F1FF 0%,
-    #F3FFF8 50%,
-    #FFF9E2 100%
+    var(--pastel-blue) 0%,
+    var(--pastel-green) 50%,
+    var(--pastel-yellow) 100%
   ) !important;
-  color: #1C1C1E;
+  color: var(--text-main) !important;
 }
 
-/* Ajuste de cores do texto no header */
 header.masthead .masthead-heading {
-  color: #1C1C1E;
+  color: var(--text-main) !important;
 }
 
 header.masthead .masthead-subheading {
-  color: #6E6E73;
+  color: var(--text-sub) !important;
 }
 
-/* Texto corrido justificado */
-.lead {
-  text-align: justify;
+/* ========= PORTFOLIO SECTION ========= */
+#portfolio {
+  background: var(--pastel-green) !important;
+  color: var(--text-main) !important;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
+
+/* ========= ABOUT ME ========= */
+#about {
+  background: var(--pastel-yellow) !important;
+  color: var(--text-main) !important;
+}
+
+#about .page-section-heading {
+  color: var(--text-main) !important;
+}
+
+/* Justificar textos */
+#about p.lead {
+  text-align: justify !important;
+  color: var(--text-sub);
+}
+
+/* ========= CONTACT ========= */
+#contact {
+  background: var(--pastel-blue) !important;
+  color: var(--text-main) !important;
+}
+
+#contact p {
+  text-align: center;
+  color: var(--text-sub);
+}
+
+/* ========= FOOTER ========= */
+footer.footer {
+  background: var(--apple-gray) !important;
+  color: var(--text-main) !important;
+}
+
+footer.footer p.lead {
+  color: var(--text-main) !important;
+}
+
+/* ========= Remover estrelas ========= */
+.divider-custom,
+.divider-custom-line,
+.divider-custom-icon {
+  display: none !important;
+}
+
