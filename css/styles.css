@@ -11130,4 +11130,44 @@ footer.footer p.lead {
 .divider-custom-icon {
   display: none !important;
 }
+/* ===== NAVBAR PASTEL LIGHT ===== */
+#mainNav {
+  background: #F5F5F7 !important; /* cinza Apple */
+  color: #1C1C1E !important;
+  border-bottom: 1px solid #E0E0E5; /* linha suave */
+}
+
+#mainNav .nav-link {
+  color: #3A3A3C !important;
+}
+
+#mainNav .nav-link:hover {
+  color: #1C1C1E !important;
+}
+/* ===== COPYRIGHT FOOTER LIGHT ===== */
+.copyright {
+  background: #F5F5F7 !important; /* mesmo fundo do footer */
+  color: #1C1C1E !important;
+}
+/* ===== HENRIQUE DIVIDER (iconeH) ===== */
+
+.h-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px auto 40px auto;
+}
+
+.h-divider .h-line {
+  height: 1px;
+  width: 100px;
+  background-color: #D1D1D6; /* cinza Apple leve */
+}
+
+.h-divider .h-icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.9;
+}
 
