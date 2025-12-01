@@ -141,15 +141,17 @@
       }
 
       .timeline-card {
-        display: none;
-        margin-top: 14px;
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-        padding: 14px 16px;
-        text-align: left;
-        max-width: 320px;
-      }
+  display: none;
+  margin-top: 14px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  padding: 14px 16px;
+  text-align: left;
+  max-width: 280px;      /* novo */
+  word-wrap: break-word; /* novo */
+  overflow-wrap: break-word; /* novo */
+}
 
       .timeline-card.active {
         display: block;
@@ -165,6 +167,24 @@
         margin-bottom: 0;
         text-align: justify;
       }
+
+      /* Permitir quebra nos títulos */
+.timeline-label {
+  white-space: normal;   /* antes era fixed */
+  line-height: 1.2;      /* deixa mais compacto */
+  max-width: 180px;      /* garante limite */
+}
+
+/* Aumentar levemente o espaço entre os itens */
+.timeline-item {
+  width: 200px;     /* antes era 180px */
+}
+
+/* Linha horizontal fica mais alinhada com os dots */
+.timeline-container::before {
+  top: 60px; /* pequeno ajuste para compensar o novo tamanho */
+}
+
     </style>
   </head>
 
