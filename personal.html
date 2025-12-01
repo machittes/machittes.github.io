@@ -6,190 +6,179 @@
     <title>Personal Projects</title>
     <link rel="icon" type="image/x-icon" href="assets/iconeH.png" />
 
-
-    <!-- Global styles (seu CSS principal do tema) -->
+    <!-- Global styles -->
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <!-- ESTILOS ESPECÍFICOS DA PÁGINA PERSONAL -->
     <style>
-  /* Card igual ao Academic */
-  .project-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-    padding: 32px 32px;
-    margin-bottom: 40px;
-  }
+      /* Card igual ao Academic */
+      .project-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        padding: 32px 32px;
+        margin-bottom: 40px;
+      }
 
-  .project-row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 50px;
-    width: 100%;
-  }
+      .project-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 50px;
+        width: 100%;
+      }
 
-  .project-carousel {
-    flex: 1;
-    max-width: 320px;
-  }
+      .project-carousel {
+        flex: 1;
+        max-width: 320px;
+      }
 
-  .project-info {
-    flex: 1;
-    min-width: 260px;
-  }
+      .project-info {
+        flex: 1;
+        min-width: 260px;
+      }
 
-  /* Swiper */
-  .swiper {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 16px;
-    margin-bottom: 18px;
-  }
+      /* Swiper */
+      .swiper {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        border-radius: 16px;
+        margin-bottom: 18px;
+      }
 
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 16px;
-    background: #000;
-  }
+      .swiper-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 16px;
+        background: #000;
+      }
 
-  .project-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+      .project-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
 
-  @media (max-width: 991px) {
-    .project-row {
-      flex-direction: column;
-      align-items: center;
-    }
+      @media (max-width: 991px) {
+        .project-row {
+          flex-direction: column;
+          align-items: center;
+        }
 
-    .project-info {
-      width: 100%;
-    }
-  }
+        .project-info {
+          width: 100%;
+        }
+      }
 
-  /* ========================= TIMELINE ========================= */
+      /* ========================= TIMELINE ========================= */
 
-/* Área fixa para exibir o card */
-.timeline-card-area {
-  margin-top: 20px;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+      .timeline-card-area {
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
 
-/* Card estilo Academic */
-.timeline-card-single {
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  padding: 22px 26px;
-  max-width: 650px;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
+      .timeline-card-single {
+        background: #ffffff;
+        border-radius: 14px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        padding: 22px 26px;
+        max-width: 650px;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+      }
 
-.timeline-card-single.show {
-  opacity: 1;
-  transform: translateY(0px);
-}
+      .timeline-card-single.show {
+        opacity: 1;
+        transform: translateY(0px);
+      }
 
-.timeline-card-single h4 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
+      .timeline-card-single h4 {
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
 
-.timeline-card-single p,
-.timeline-card-single li {
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
+      .timeline-card-single p,
+      .timeline-card-single li {
+        font-size: 0.95rem;
+        line-height: 1.45;
+        text-align: justify !important;
+      }
 
-/* Contêiner da timeline */
-.timeline-container {
-  position: relative;
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  padding: 20px 10px 30px 10px;
-  white-space: nowrap;
-  scrollbar-width: thin;
-}
+      .timeline-container {
+        position: relative;
+        display: flex;
+        gap: 40px;
+        overflow-x: auto;
+        padding: 20px 10px 30px 10px;
+        white-space: nowrap;
+        scrollbar-width: thin;
+      }
 
-/* Linha */
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 60px;
-  height: 2px;
-  background-color: rgba(13, 110, 253, 0.35);
-  z-index: 0;
-}
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        height: 2px;
+        background-color: rgba(13, 110, 253, 0.35);
+        z-index: 0;
+      }
 
-/* Item */
-.timeline-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  z-index: 1;
-}
+      .timeline-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        z-index: 1;
+      }
 
-/* Data */
-.timeline-date {
-  font-weight: bold;
-  margin-bottom: 6px;
-  text-align: center;
-  font-size: 0.9rem;
-}
+      .timeline-date {
+        font-weight: bold;
+        margin-bottom: 6px;
+        text-align: center;
+        font-size: 0.9rem;
+      }
 
-/* Bolinha */
-.timeline-dot {
-  width: 18px;
-  height: 18px;
-  background-color: #0d6efd;
-  border-radius: 50%;
-  margin-bottom: 8px;
-}
+      .timeline-dot {
+        width: 18px;
+        height: 18px;
+        background-color: #0d6efd;
+        border-radius: 50%;
+        margin-bottom: 8px;
+      }
 
-/* Título */
-.timeline-label {
-  border: none;
-  background: none;
-  color: #0d6efd;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-align: center;
-  white-space: normal;
-  line-height: 1.2;
-  max-width: 180px;
-  padding: 0;
-}
-
-</style>
+      .timeline-label {
+        border: none;
+        background: none;
+        color: #0d6efd;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.2;
+        max-width: 180px;
+        padding: 0;
+      }
+    </style>
 
   </head>
 
   <body id="page-top">
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
       <div class="container">
@@ -199,8 +188,7 @@
           class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-        >
+          data-bs-target="#navbarResponsive">
           Menu <i class="fas fa-bars"></i>
         </button>
 
@@ -231,13 +219,14 @@
       <div class="container d-flex align-items-center flex-column">
         <h1 class="masthead-heading text-uppercase mb-0 mt-5">Personal Projects</h1>
 
-        <div class="divider-custom divider-light">
-          <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-          <div class="divider-custom-line"></div>
+        <!-- LINHA H -->
+        <div class="h-divider">
+          <div class="h-line"></div>
+          <img src="assets/iconeH.png" class="h-icon" alt="H Divider">
+          <div class="h-line"></div>
         </div>
 
-        <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px;">
+        <p class="masthead-subheading font-weight-light mb-0" style="max-width: 700px; text-align: justify;">
           Here is the spot for my personal projects, created to explore ideas, deepen my skills,
           and grow as a mobile developer. These apps reflect my journey from learning the
           fundamentals to building complete, real-world experiences.
@@ -248,7 +237,14 @@
     <!-- Icon Section -->
     <section class="page-section" id="app-icons">
       <div class="container text-center">
-        <h2 class="page-section-heading text-uppercase text-secondary mb-5">Apps</h2>
+        <h2 class="page-section-heading text-uppercase text-secondary mb-0">Apps</h2>
+
+        <!-- LINHA H -->
+        <div class="h-divider">
+          <div class="h-line"></div>
+          <img src="assets/iconeH.png" class="h-icon" alt="H Divider">
+          <div class="h-line"></div>
+        </div>
 
         <div class="row justify-content-center">
           <div class="col-6 col-md-4 mb-5">
@@ -269,7 +265,7 @@
     </section>
 
     <!-- ======================= TR3TA ======================= -->
-    <section class="page-section bg-light" id="tr3ta-projects">
+    <section class="page-section" id="tr3ta-projects">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-5">TR3TA</h2>
 
@@ -279,98 +275,82 @@
               <div class="project-carousel">
                 <div class="swiper tr3ta-swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/treta/2treta.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/treta/3treta.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/treta/4treta.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/treta/5treta.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/treta/1treta.png" />
-                    </div>
+                    <div class="swiper-slide"><img src="assets/img/personal/treta/2treta.png" /></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/treta/3treta.png" /></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/treta/4treta.png" /></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/treta/5treta.png" /></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/treta/1treta.png" /></div>
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
 
               <div class="project-info">
-                <p style="text-align: justify;">
+                <p>
                   Tr3ta is a board game created in 2010 (not yet released to the public) designed
                   for three players. Each participant commands one of three armies competing for
                   control of the central region. The core gameplay blends D6-based movement with
                   D12 combat resolution.
                 </p>
 
-                <p style="text-align: justify;">
+                <p>
                   The new app version stays true to the original mechanics but has been completely
                   redesigned to deliver a more dynamic, vibrant, and intuitive digital experience.
                   Beyond the main match, the game includes pre-game features such as mode selection,
                   turn randomization, and customization options.
                 </p>
 
-                <p style="text-align: justify;">
+                <p>
                   During gameplay, players receive visual guidance showing possible movement paths,
                   attack opportunities, and defensive positions—enhancing decision-making while
                   preserving the strategic depth of the original board game.
                 </p>
 
-                <p style="text-align: justify;">
+                <p>
                   With local multiplayer support, up to three players can compete just like in the
                   physical version, now enhanced with visual cues and accessibility features aimed
                   at making the experience more inclusive.
                 </p>
 
-                <p style="text-align: justify;">
-                  Scheduled for release in early 2026, Tr3ta is currently under active development.
-                </p>
+                <p>Scheduled for release in early 2026, Tr3ta is currently under active development.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Buttons OUTSIDE the card -->
+        <!-- Buttons -->
         <div class="text-center mt-4">
-          <!-- Watch Demo -->
+
           <button
             class="btn btn-outline-primary mb-3"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#tr3taVideo"
-          >
+            data-bs-target="#tr3taVideo">
             Watch Demo
           </button>
 
           <div class="collapse mb-4" id="tr3taVideo">
             <video controls style="max-width: 350px; border-radius: 10px;">
-              <source src="assets/img/personal/treta/TretaVideoDemo.mov" type="video/mp4" />
+              <source src="assets/img/personal/treta/TretaVideoDemo.mov" type="video/mp4"/>
             </video>
           </div>
 
-          <!-- Timeline -->
           <button
             class="btn btn-primary mb-3"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#tr3taTimeline"
-          >
+            data-bs-target="#tr3taTimeline">
             Development Timeline
           </button>
 
           <div class="collapse" id="tr3taTimeline">
             <div class="timeline-outer">
-  <div id="tr3ta-timeline"></div>
+              <div id="tr3ta-timeline"></div>
 
-  <!-- NOVA ÁREA FIXA DO CARD -->
-  <div id="tr3ta-timeline-card-area" class="timeline-card-area"></div>
-</div>
-
+              <div id="tr3ta-timeline-card-area" class="timeline-card-area"></div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -386,28 +366,19 @@
               <div class="project-carousel">
                 <div class="swiper notix-swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/notixme/1NotixMe.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/notixme/2NotixMe.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/notixme/3NotixMe.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/notixme/4NotixMe.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/personal/notixme/5NotixMe.png" />
-                    </div>
+                    <div class="swiper-slide"><img src="assets/img/personal/notixme/1NotixMe.png"/></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/notixme/2NotixMe.png"/></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/notixme/3NotixMe.png"/></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/notixme/4NotixMe.png"/></div>
+                    <div class="swiper-slide"><img src="assets/img/personal/notixme/5NotixMe.png"/></div>
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
 
               <div class="project-info">
-                <p style="text-align: justify;">
+
+                <p>
                   NotixMe is a customizable smart reminder app with advanced scheduling, snooze
                   actions, recurring events, random alerts, status tracking, and a full long-term
                   roadmap.
@@ -416,7 +387,7 @@
                 <h4 class="text-uppercase text-secondary mt-4 mb-3" style="font-size: 1.1rem;">
                   Planned Features
                 </h4>
-                <ul>
+                <ul style="text-align: justify;">
                   <li>Advanced scheduling engine</li>
                   <li>Random mode with minimum interval logic</li>
                   <li>Status system (Scheduled, In Progress, Completed)</li>
@@ -429,32 +400,31 @@
                   Technologies
                 </h4>
                 <p>Swift, SwiftUI, UserNotifications, MVVM, UserDefaults, local scheduling.</p>
+
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Notix -->
         <div class="text-center mt-3">
           <button
             class="btn btn-primary mb-3"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#notixTimeline"
-          >
+            data-bs-target="#notixTimeline">
             Development Timeline
           </button>
 
           <div class="collapse" id="notixTimeline">
             <div class="timeline-outer">
-  <div id="notix-timeline"></div>
+              <div id="notix-timeline"></div>
 
-  <!-- NOVA ÁREA FIXA DO CARD -->
-  <div id="notix-timeline-card-area" class="timeline-card-area"></div>
-</div>
-
+              <div id="notix-timeline-card-area" class="timeline-card-area"></div>
+            </div>
           </div>
+
         </div>
+
       </div>
     </section>
 
@@ -470,19 +440,14 @@
           <div class="col-lg-4">
             <h4 class="text-uppercase mb-4">Connect</h4>
 
-            <a
-              class="btn btn-outline-light btn-social mx-1"
-              href="https://www.linkedin.com/in/henrique-machitte-0928767a/"
-              target="_blank"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/henrique-machitte-0928767a/" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
 
-            <a
-              class="btn btn-outline-light btn-social mx-1"
-              href="https://github.com/machittes/Portfolio"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/machittes/Portfolio" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+
           </div>
         </div>
       </div>
@@ -500,5 +465,6 @@
 
     <!-- Script específico da página Personal -->
     <script src="js/personal.js"></script>
+
   </body>
 </html>
