@@ -11182,4 +11182,26 @@ footer.footer p.lead {
   outline: none !important;
   box-shadow: none !important;
 }
+/* FOOTER – cinza médio */
+footer.footer {
+  background: #B9B9BF !important;   /* cinza médio elegante */
+  color: #1C1C1E !important;
+  padding-top: 50px !important;
+  padding-bottom: 40px !important;
+  border-top: 1px solid #A1A1A6 !important;  /* separação suave */
+}
+
+/* COPYRIGHT – cinza um tom abaixo, mantendo contraste */
+.copyright {
+  background: #AFAFB5 !important;   /* cinza médio um pouco mais escuro */
+  color: #1C1C1E !important;
+  padding: 18px 0 !important;
+  border-top: 1px solid #9C9CA3 !important; /* separa do footer */
+}
+
+/* Seção de contato — garantir que NÃO gruda no footer */
+#contact {
+  padding-bottom: 80px !important;     /* aumenta o espaço */
+  border-bottom: 1px solid #D6D6DA !important; /* cria delimitação */
+}
 
