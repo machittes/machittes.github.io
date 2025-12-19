@@ -135,13 +135,41 @@ const tr3taTimeline = [
       <p>End of Stage 3.</p>
     `,
   },
+
   {
-    date: "Next Steps",
-    title: "Combat System",
-    text: `
-      <p>Beginning of Stage 4 (Attack & Defense). Development will focus on combat resolution, army interactions, and overall match balance.</p>
-    `,
-  },
+  date: "15–19/12/2025",
+  title: "Board Adjacency System",
+  text: `
+    <p>
+      Designed and implemented the complete board adjacency system.
+      Built a manual adjacency table covering the entire board, created a dedicated
+      <strong>AdjacencyHelper</strong>, and implemented a validation layer to guarantee
+      structural integrity.
+    </p>
+    <ul>
+      <li>No self-references</li>
+      <li>Bidirectional adjacency consistency</li>
+      <li>Only valid cell references allowed</li>
+    </ul>
+    <p>
+      This system is now the single source of truth for movement and attack range calculations,
+      enabling reliable attack and defense mechanics in future phases.
+    </p>
+  `,
+},
+{
+  date: "Next Steps",
+  title: "Attack & Defense Flow",
+  text: `
+    <p>
+      Introduce the attack and defense flow by adding contextual in-game pop-ups after movement.
+      The system will detect when a piece is in an attack position, prompt the player to decide
+      whether to attack, highlight valid targets, and handle attack resolution based on game
+      modes and dice rolls.
+    </p>
+  `,
+},
+
 ];
 
 // ---------------------- NOTIX DATA ----------------------
@@ -213,6 +241,29 @@ const notixTimeline = [
       <p>Implemented alarm history and statistics. Pending correction system adjustments.</p>
     `,
   },
+{
+  date: "10–11/12/2025",
+  title: "Categories, History & UX Improvements",
+  text: `
+    <p>
+      Introduced a category system to better organize reminders and sessions across the app.
+      List View and History View now support collapsible sections, improving navigation and readability.
+    </p>
+    <p>
+      The History View was refactored to allow filtering by category or displaying all events together,
+      giving users more control over how past data is reviewed.
+    </p>
+    <p>
+      Added confirmation dialogs before destructive actions, such as deleting all history entries,
+      reducing the risk of accidental data loss.
+    </p>
+    <p>
+      Finalized visual identity by applying the app icon and implementing splash screens.
+    </p>
+  `,
+},
+
+  
 ];
 
 // ---------------------- INITIALIZATION ----------------------
