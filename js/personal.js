@@ -262,6 +262,23 @@ const notixTimeline = [
     </p>
   `,
 },
+  
+{
+  date: "07/01/2026",
+  title: "App Store Submission & Final Fixes",
+  text: `
+    <p>
+      Final UI and interaction adjustments were completed, including fixing
+      the alarm list dropdown behavior to ensure consistent and predictable
+      user interaction.
+    </p>
+    <p>
+      The app was officially <strong>submitted for App Store review</strong>,
+      following Apple’s best practices for privacy, metadata, screenshots,
+      accessibility, and notification handling.
+    </p>
+  `,
+},
 
   
 ];
