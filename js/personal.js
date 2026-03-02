@@ -280,6 +280,23 @@ const notixTimeline = [
   `,
 },
 
+  {
+  date: "Feb/2026",
+  title: "Repositioning & Mindful Upgrade",
+  text: `
+    <p>
+      After multiple attempts to launch on the App Store, the project was fully repositioned from a traditional productivity tool into an
+      <strong>offline-first mindful timing system</strong>.
+    </p>
+    <ul>
+      <li>Introduced a guided wizard for faster setup</li>
+      <li>Added new sound options to support different moods and contexts</li>
+      <li>Implemented full English and Portuguese (Brazil) localization</li>
+      <li>Refined weekly timing behavior and overall reliability</li>
+    </ul>
+  `,
+},
+
   
 ];
 
