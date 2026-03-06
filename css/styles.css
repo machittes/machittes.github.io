@@ -11345,7 +11345,7 @@ footer.footer {
 
 .app-store-button img {
   display: block;
-  height: 64px; /* aumenta aqui se quiser mais */
+  height: 60px; /* aumenta aqui se quiser mais */
   width: auto;
 }
 .app-store-wrapper {
