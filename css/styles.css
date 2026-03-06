@@ -11333,29 +11333,24 @@ footer.footer {
 }
 
 .app-store-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  display: inline-block;
   text-decoration: none;
-  background: #000;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: 600;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .app-store-button:hover {
   transform: translateY(-1px);
   opacity: 0.92;
-  color: #fff;
 }
 
 .app-store-button img {
-  height: 28px;
-  width: auto;
   display: block;
+  height: 64px; /* aumenta aqui se quiser mais */
+  width: auto;
+}
+.app-store-wrapper {
+  display: flex;
+  justify-content: center; /* troca para center se quiser centralizar */
 }
 
 
