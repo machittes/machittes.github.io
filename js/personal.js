@@ -297,11 +297,19 @@ const notixTimeline = [
   `,
 },
 
- {
+{
   date: "Mar 5, 2026",
-  title: "TESTE ZEPH 123",
+  title: "Official Launch",
   text: `
-    <p>Se isso aparecer, o arquivo certo está sendo lido.</p>
+    <p>
+      NotixMe was officially launched on the App Store. This milestone marks the transition
+      from a personal development project into a published product focused on mindful,
+      offline-first reminders.
+    </p>
+    <p>
+      At the same time, the Android version is now under construction and will expand the
+      product to a broader audience in a future release.
+    </p>
   `
 },
 
