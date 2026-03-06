@@ -297,11 +297,10 @@ const notixTimeline = [
   `,
 },
 
-  {
+ {
   date: "Mar 5, 2026",
-  label: "Official Launch",
-  title: "NotixMe officially launched",
-  content: `
+  title: "Official Launch",
+  text: `
     <p>
       NotixMe was officially launched on the App Store. This milestone marks the transition
       from a personal development project into a published product focused on mindful,
