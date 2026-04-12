@@ -191,6 +191,39 @@
   color: #1C1C1E !important;
 }
 
+      .app-store-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.app-store-button--apple img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.app-store-button--google img {
+  height: 58px; /* ajuste fino aqui */
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .app-store-button--apple img,
+  .app-store-button--google img {
+    height: 52px;
+  }
+}
       
     </style>
 
@@ -343,7 +376,7 @@
 
   <div class="app-store-wrapper mt-4 mb-4">
   <a
-    class="app-store-button"
+    class="app-store-button app-store-button--apple"
     href="https://apps.apple.com/ca/app/notixme/id6757501397"
     target="_blank"
     rel="noopener noreferrer"
@@ -351,15 +384,14 @@
     <img src="assets/img/personal/notixme/AppStoreIcon.svg" alt="Download on the App Store" />
   </a>
 
-    <a
-  class="app-store-button"
-  href="https://play.google.com/store/apps/details?id=com.machitte.notixme"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Get NotixMe on Google Play">
-  <img src="assets/img/personal/notixme/google-play-badge.png" alt="Get it on Google Play" />
-</a>
-    
+  <a
+    class="app-store-button app-store-button--google"
+    href="https://play.google.com/store/apps/details?id=com.machitte.notixme"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Get NotixMe on Google Play">
+    <img src="assets/img/personal/notixme/google-play-badge.png" alt="Get it on Google Play" />
+  </a>
 </div>
 
   <h4 class="text-uppercase text-secondary mt-4 mb-3" style="font-size: 1.1rem;">
