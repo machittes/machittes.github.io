@@ -66,8 +66,12 @@ function buildTimeline(containerId, cardAreaId, data) {
     });
   });
 
-  // Mostra o primeiro card por padrão
-  showCard(0);
+  // Mostra o último card por padrão e scrolla até o final
+  const lastIndex = data.length - 1;
+  showCard(lastIndex);
+  requestAnimationFrame(() => {
+    container.scrollLeft = container.scrollWidth;
+  });
 }
 
 // ---------------------- TR3TA DATA ----------------------
