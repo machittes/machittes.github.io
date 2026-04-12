@@ -14,9 +14,8 @@ new Swiper(".notix-swiper", {
 function buildTimeline(containerId, cardAreaId, data) {
   const container = document.getElementById(containerId);
   const cardArea = document.getElementById(cardAreaId);
-  if (!container || !cardArea) return;
+  if (!container || !cardArea) return null;
 
-  // Renderiza só os pontos + títulos
   container.innerHTML = `
     <div class="timeline-container">
       ${data
@@ -35,14 +34,14 @@ function buildTimeline(containerId, cardAreaId, data) {
     </div>
   `;
 
+  const timelineScroller = container.querySelector(".timeline-container");
+
   function showCard(index) {
     const item = data[index];
     if (!item) return;
 
-    // Limpa card anterior
     cardArea.innerHTML = "";
 
-    // Cria card novo
     const card = document.createElement("div");
     card.className = "timeline-card-single";
     card.innerHTML = `
@@ -52,13 +51,11 @@ function buildTimeline(containerId, cardAreaId, data) {
 
     cardArea.appendChild(card);
 
-    // Animação de fade-in
     requestAnimationFrame(() => {
       card.classList.add("show");
     });
   }
 
-  // Clique nos títulos
   container.querySelectorAll(".timeline-label").forEach((label) => {
     label.addEventListener("click", () => {
       const index = Number(label.dataset.index);
@@ -66,12 +63,21 @@ function buildTimeline(containerId, cardAreaId, data) {
     });
   });
 
-  // Mostra o último card por padrão e scrolla até o final
+  function scrollToEnd() {
+    if (!timelineScroller) return;
+    timelineScroller.scrollLeft = timelineScroller.scrollWidth;
+  }
+
   const lastIndex = data.length - 1;
   showCard(lastIndex);
+
   requestAnimationFrame(() => {
-    container.scrollLeft = container.scrollWidth;
+    requestAnimationFrame(() => {
+      scrollToEnd();
+    });
   });
+
+  return { scrollToEnd };
 }
 
 // ---------------------- TR3TA DATA ----------------------
@@ -139,41 +145,39 @@ const tr3taTimeline = [
       <p>End of Stage 3.</p>
     `,
   },
-
   {
-  date: "15–19/12/2025",
-  title: "Board Adjacency System",
-  text: `
-    <p>
-      Designed and implemented the complete board adjacency system.
-      Built a manual adjacency table covering the entire board, created a dedicated
-      <strong>AdjacencyHelper</strong>, and implemented a validation layer to guarantee
-      structural integrity.
-    </p>
-    <ul>
-      <li>No self-references</li>
-      <li>Bidirectional adjacency consistency</li>
-      <li>Only valid cell references allowed</li>
-    </ul>
-    <p>
-      This system is now the single source of truth for movement and attack range calculations,
-      enabling reliable attack and defense mechanics in future phases.
-    </p>
-  `,
-},
-{
-  date: "Next Steps",
-  title: "Attack & Defense Flow",
-  text: `
-    <p>
-      Introduce the attack and defense flow by adding contextual in-game pop-ups after movement.
-      The system will detect when a piece is in an attack position, prompt the player to decide
-      whether to attack, highlight valid targets, and handle attack resolution based on game
-      modes and dice rolls.
-    </p>
-  `,
-},
-
+    date: "15–19/12/2025",
+    title: "Board Adjacency System",
+    text: `
+      <p>
+        Designed and implemented the complete board adjacency system.
+        Built a manual adjacency table covering the entire board, created a dedicated
+        <strong>AdjacencyHelper</strong>, and implemented a validation layer to guarantee
+        structural integrity.
+      </p>
+      <ul>
+        <li>No self-references</li>
+        <li>Bidirectional adjacency consistency</li>
+        <li>Only valid cell references allowed</li>
+      </ul>
+      <p>
+        This system is now the single source of truth for movement and attack range calculations,
+        enabling reliable attack and defense mechanics in future phases.
+      </p>
+    `,
+  },
+  {
+    date: "Next Steps",
+    title: "Attack & Defense Flow",
+    text: `
+      <p>
+        Introduce the attack and defense flow by adding contextual in-game pop-ups after movement.
+        The system will detect when a piece is in an attack position, prompt the player to decide
+        whether to attack, highlight valid targets, and handle attack resolution based on game
+        modes and dice rolls.
+      </p>
+    `,
+  },
 ];
 
 // ---------------------- NOTIX DATA ----------------------
@@ -245,103 +249,111 @@ const notixTimeline = [
       <p>Implemented alarm history and statistics. Pending correction system adjustments.</p>
     `,
   },
-{
-  date: "10–11/12/2025",
-  title: "Categories, History & UX Improvements",
-  text: `
-    <p>
-      Introduced a category system to better organize reminders and sessions across the app.
-      List View and History View now support collapsible sections, improving navigation and readability.
-    </p>
-    <p>
-      The History View was refactored to allow filtering by category or displaying all events together,
-      giving users more control over how past data is reviewed.
-    </p>
-    <p>
-      Added confirmation dialogs before destructive actions, such as deleting all history entries,
-      reducing the risk of accidental data loss.
-    </p>
-    <p>
-      Finalized visual identity by applying the app icon and implementing splash screens.
-    </p>
-  `,
-},
-  
-{
-  date: "07/01/2026",
-  title: "App Store Submission & Final Fixes",
-  text: `
-    <p>
-      Final UI and interaction adjustments were completed, including fixing
-      the alarm list dropdown behavior to ensure consistent and predictable
-      user interaction.
-    </p>
-    <p>
-      The app was officially <strong>submitted for App Store review</strong>,
-      following Apple’s best practices for privacy, metadata, screenshots,
-      accessibility, and notification handling.
-    </p>
-  `,
-},
-
   {
-  date: "Feb/2026",
-  title: "Repositioning & Mindful Upgrade",
-  text: `
-    <p>
-      After multiple attempts to launch on the App Store, the project was fully repositioned from a traditional productivity tool into an
-      <strong>offline-first mindful timing system</strong>.
-    </p>
-    <ul>
-      <li>Introduced a guided wizard for faster setup</li>
-      <li>Added new sound options to support different moods and contexts</li>
-      <li>Implemented full English and Portuguese (Brazil) localization</li>
-      <li>Refined weekly timing behavior and overall reliability</li>
-    </ul>
-  `,
-},
-
-{
-  date: "Mar 5, 2026",
-  title: "Official Launch",
-  text: `
-    <p>
-      NotixMe was officially launched on the App Store. This milestone marks the transition
-      from a personal development project into a published product focused on mindful,
-      offline-first reminders.
-    </p>
-    <p>
-      At the same time, the Android version is now under construction and will expand the
-      product to a broader audience in a future release.
-    </p>
-  `
-},
-
+    date: "10–11/12/2025",
+    title: "Categories, History & UX Improvements",
+    text: `
+      <p>
+        Introduced a category system to better organize reminders and sessions across the app.
+        List View and History View now support collapsible sections, improving navigation and readability.
+      </p>
+      <p>
+        The History View was refactored to allow filtering by category or displaying all events together,
+        giving users more control over how past data is reviewed.
+      </p>
+      <p>
+        Added confirmation dialogs before destructive actions, such as deleting all history entries,
+        reducing the risk of accidental data loss.
+      </p>
+      <p>
+        Finalized visual identity by applying the app icon and implementing splash screens.
+      </p>
+    `,
+  },
   {
-  date: "Apr 12, 2026",
-  title: "Android Launch",
-  text: `
-    <p>
-      NotixMe was officially released on Google Play, expanding the app to a broader audience
-      and establishing its presence as a cross-platform product.
-    </p>
-    <p>
-      The Android version delivers the same offline-first and privacy-focused experience,
-      ensuring consistency across both iOS and Android platforms.
-    </p>
-    <p>
-      At the same time, the iOS version received improvements focused on performance,
-      notification reliability, and overall user experience refinement.
-    </p>
-  `
-},
-
-  
+    date: "07/01/2026",
+    title: "App Store Submission & Final Fixes",
+    text: `
+      <p>
+        Final UI and interaction adjustments were completed, including fixing
+        the alarm list dropdown behavior to ensure consistent and predictable
+        user interaction.
+      </p>
+      <p>
+        The app was officially <strong>submitted for App Store review</strong>,
+        following Apple’s best practices for privacy, metadata, screenshots,
+        accessibility, and notification handling.
+      </p>
+    `,
+  },
+  {
+    date: "Feb/2026",
+    title: "Repositioning & Mindful Upgrade",
+    text: `
+      <p>
+        After multiple attempts to launch on the App Store, the project was fully repositioned from a traditional productivity tool into an
+        <strong>offline-first mindful timing system</strong>.
+      </p>
+      <ul>
+        <li>Introduced a guided wizard for faster setup</li>
+        <li>Added new sound options to support different moods and contexts</li>
+        <li>Implemented full English and Portuguese (Brazil) localization</li>
+        <li>Refined weekly timing behavior and overall reliability</li>
+      </ul>
+    `,
+  },
+  {
+    date: "Mar 5, 2026",
+    title: "Official Launch",
+    text: `
+      <p>
+        NotixMe was officially launched on the App Store. This milestone marks the transition
+        from a personal development project into a published product focused on mindful,
+        offline-first reminders.
+      </p>
+      <p>
+        At the same time, the Android version is now under construction and will expand the
+        product to a broader audience in a future release.
+      </p>
+    `,
+  },
+  {
+    date: "Apr 12, 2026",
+    title: "Android Launch",
+    text: `
+      <p>
+        NotixMe was officially released on Google Play, expanding the app to a broader audience
+        and establishing its presence as a cross-platform product.
+      </p>
+      <p>
+        The Android version delivers the same offline-first and privacy-focused experience,
+        ensuring consistency across both iOS and Android platforms.
+      </p>
+      <p>
+        At the same time, the iOS version received improvements focused on performance,
+        notification reliability, and overall user experience refinement.
+      </p>
+    `,
+  },
 ];
 
 // ---------------------- INITIALIZATION ----------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-  buildTimeline("tr3ta-timeline", "tr3ta-timeline-card-area", tr3taTimeline);
-  buildTimeline("notix-timeline", "notix-timeline-card-area", notixTimeline);
+  const tr3ta = buildTimeline("tr3ta-timeline", "tr3ta-timeline-card-area", tr3taTimeline);
+  const notix = buildTimeline("notix-timeline", "notix-timeline-card-area", notixTimeline);
+
+  const notixCollapse = document.getElementById("notixTimeline");
+  if (notixCollapse) {
+    notixCollapse.addEventListener("shown.bs.collapse", () => {
+      notix?.scrollToEnd();
+    });
+  }
+
+  const tr3taCollapse = document.getElementById("tr3taTimeline");
+  if (tr3taCollapse) {
+    tr3taCollapse.addEventListener("shown.bs.collapse", () => {
+      tr3ta?.scrollToEnd();
+    });
+  }
 });
