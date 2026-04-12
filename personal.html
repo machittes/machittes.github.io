@@ -129,7 +129,8 @@
         content: "";
         position: absolute;
         left: 0;
-        right: 0;
+        width: max-content;
+        min-width: 100%;
         top: 60px;
         height: 2px;
         background-color: rgba(13, 110, 253, 0.35);
@@ -173,69 +174,67 @@
         max-width: 180px;
         padding: 0;
       }
-/* ==== TIMELINE EM PRETO APPLE ==== */
 
-.timeline-container::before {
-  background-color: #1C1C1E !important;
-}
+      /* ==== TIMELINE EM PRETO APPLE ==== */
+      .timeline-container::before {
+        background-color: #1C1C1E !important;
+      }
 
-.timeline-dot {
-  background-color: #1C1C1E !important;
-}
+      .timeline-dot {
+        background-color: #1C1C1E !important;
+      }
 
-.timeline-label {
-  color: #1C1C1E !important;
-}
+      .timeline-label {
+        color: #1C1C1E !important;
+      }
 
-.timeline-date {
-  color: #1C1C1E !important;
-}
+      .timeline-date {
+        color: #1C1C1E !important;
+      }
 
       .app-store-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-}
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+      }
 
-.app-store-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
+      .app-store-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
 
-.app-store-button--apple img {
-  height: 60px;
-  width: auto;
-  display: block;
-}
+      .app-store-button--apple img {
+        height: 60px;
+        width: auto;
+        display: block;
+      }
 
-.app-store-button--google img {
-  height: 54px; /* ajuste fino aqui */
-  width: auto;
-  display: block;
-}
+      .app-store-button--google img {
+        height: 54px;
+        width: auto;
+        display: block;
+      }
 
-@media (max-width: 576px) {
-  .app-store-button--apple img,
-  .app-store-button--google img {
-    height: 52px;
-  }
-}
-      
+      @media (max-width: 576px) {
+        .app-store-button--apple img,
+        .app-store-button--google img {
+          height: 52px;
+        }
+      }
     </style>
 
     <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6QB1EVNHWP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6QB1EVNHWP');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QB1EVNHWP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6QB1EVNHWP');
+    </script>
 
   </head>
 
@@ -309,25 +308,25 @@
         </div>
 
         <div class="row justify-content-center">
-  <div class="col-6 col-md-4 mb-5">
-    <a href="#notix-projects">
-      <img src="assets/img/personal/notixme/iconeNotixMe.png" style="width: 130px; transform: scale(1.3);" />
-    </a>
-    <h4 class="text-uppercase text-secondary mt-3">NotixMe</h4>
-  </div>
+          <div class="col-6 col-md-4 mb-5">
+            <a href="#notix-projects">
+              <img src="assets/img/personal/notixme/iconeNotixMe.png" style="width: 130px; transform: scale(1.3);" />
+            </a>
+            <h4 class="text-uppercase text-secondary mt-3">NotixMe</h4>
+          </div>
 
-  <div class="col-6 col-md-4 mb-5">
-    <a href="#tr3ta-projects">
-      <img src="assets/img/personal/treta/iconeTreta.png" style="width: 130px" />
-    </a>
-    <h4 class="text-uppercase text-secondary mt-3">TR3TA</h4>
-  </div>
-</div>
+          <div class="col-6 col-md-4 mb-5">
+            <a href="#tr3ta-projects">
+              <img src="assets/img/personal/treta/iconeTreta.png" style="width: 130px" />
+            </a>
+            <h4 class="text-uppercase text-secondary mt-3">TR3TA</h4>
+          </div>
+        </div>
 
       </div>
     </section>
 
-<!-- ======================= NotixMe ======================= -->
+    <!-- ======================= NotixMe ======================= -->
     <section class="page-section" id="notix-projects">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-5">NotixMe</h2>
@@ -352,87 +351,86 @@
                 </div>
               </div>
 
-            <div class="project-info">
+              <div class="project-info">
 
-  <p>
-    <strong>NotixMe</strong> is a <strong>mindfulness-inspired reminder app</strong> designed to create intentional pauses throughout the day.
-  </p>
+                <p>
+                  <strong>NotixMe</strong> is a <strong>mindfulness-inspired reminder app</strong> designed to create intentional pauses throughout the day.
+                </p>
 
-  <p>
-    Inspired by techniques from <strong>behavioral psychology</strong> and <strong>mindfulness practices</strong>, the app delivers gentle prompts during user-defined time windows to encourage awareness and support emotional self-regulation.
-  </p>
+                <p>
+                  Inspired by techniques from <strong>behavioral psychology</strong> and <strong>mindfulness practices</strong>, the app delivers gentle prompts during user-defined time windows to encourage awareness and support emotional self-regulation.
+                </p>
 
-  <p>
-    Unlike many productivity tools, <strong>NotixMe focuses on simplicity and privacy</strong>. The app works <strong>fully offline</strong> and <strong>does not collect user data</strong>.
-  </p>
+                <p>
+                  Unlike many productivity tools, <strong>NotixMe focuses on simplicity and privacy</strong>. The app works <strong>fully offline</strong> and <strong>does not collect user data</strong>.
+                </p>
 
-  <p>
-  NotixMe is available on both <strong>iOS and Android</strong>, expanding its reach to a broader audience while maintaining a consistent offline-first experience across platforms.
-</p>
+                <p>
+                  NotixMe is available on both <strong>iOS and Android</strong>, expanding its reach to a broader audience while maintaining a consistent offline-first experience across platforms.
+                </p>
 
-<p>
-  The iOS version was developed as a <strong>native application using SwiftUI</strong> and modern <strong>iOS architecture patterns</strong>. The Android version was built using <strong>Kotlin</strong> and follows a clean, scalable architecture aligned with modern Android development practices.
-</p>
+                <p>
+                  The iOS version was developed as a <strong>native application using SwiftUI</strong> and modern <strong>iOS architecture patterns</strong>. The Android version was built using <strong>Kotlin</strong> and follows a clean, scalable architecture aligned with modern Android development practices.
+                </p>
 
-  <div class="app-store-wrapper mt-4 mb-4">
-  <a
-    class="app-store-button app-store-button--apple"
-    href="https://apps.apple.com/ca/app/notixme/id6757501397"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Download NotixMe on the App Store">
-    <img src="assets/img/personal/notixme/AppStoreIcon.svg" alt="Download on the App Store" />
-  </a>
+                <div class="app-store-wrapper mt-4 mb-4">
+                  <a
+                    class="app-store-button app-store-button--apple"
+                    href="https://apps.apple.com/ca/app/notixme/id6757501397"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download NotixMe on the App Store">
+                    <img src="assets/img/personal/notixme/AppStoreIcon.svg" alt="Download on the App Store" />
+                  </a>
 
-  <a
-    class="app-store-button app-store-button--google"
-    href="https://play.google.com/store/apps/details?id=com.machitte.notixme"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Get NotixMe on Google Play">
-    <img src="assets/img/personal/notixme/google-play-badge.png" alt="Get it on Google Play" />
-  </a>
-</div>
+                  <a
+                    class="app-store-button app-store-button--google"
+                    href="https://play.google.com/store/apps/details?id=com.machitte.notixme"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Get NotixMe on Google Play">
+                    <img src="assets/img/personal/notixme/google-play-badge.png" alt="Get it on Google Play" />
+                  </a>
+                </div>
 
-  <h4 class="text-uppercase text-secondary mt-4 mb-3" style="font-size: 1.1rem;">
-    Implemented Features
-  </h4>
+                <h4 class="text-uppercase text-secondary mt-4 mb-3" style="font-size: 1.1rem;">
+                  Implemented Features
+                </h4>
 
-  <ul style="text-align: justify;">
-    <li>Flexible reminder scheduling with custom daily time windows</li>
-    <li>Evenly spaced or randomized mindful prompts</li>
-    <li>Optional pre-alert notifications before each cue</li>
-    <li>Weekly scheduling patterns</li>
-    <li>Custom mindful phrases and prompt variations</li>
-    <li>Local activity history and insights visualization</li>
-    <li>Guided setup wizard for first-time configuration</li>
-    <li>Fully offline architecture with no data collection</li>
-    <li>Cross-platform availability (iOS and Android)</li>
-  </ul>
+                <ul style="text-align: justify;">
+                  <li>Flexible reminder scheduling with custom daily time windows</li>
+                  <li>Evenly spaced or randomized mindful prompts</li>
+                  <li>Optional pre-alert notifications before each cue</li>
+                  <li>Weekly scheduling patterns</li>
+                  <li>Custom mindful phrases and prompt variations</li>
+                  <li>Local activity history and insights visualization</li>
+                  <li>Guided setup wizard for first-time configuration</li>
+                  <li>Fully offline architecture with no data collection</li>
+                  <li>Cross-platform availability (iOS and Android)</li>
+                </ul>
 
-  <h4 class="text-uppercase text-secondary mt-4 mb-3" style="font-size: 1.1rem;">
-    Technologies
-  </h4>
+                <h4 class="text-uppercase text-secondary mt-4 mb-3" style="font-size: 1.1rem;">
+                  Technologies
+                </h4>
 
-  <p>
-  <strong>iOS</strong><br>
-  Swift<br>
-  SwiftUI<br>
-  MVVM Architecture<br>
-  UserDefaults (local persistence)<br>
-  UNUserNotificationCenter (local notifications)<br>
-  Swift Charts (data visualization)<br><br>
+                <p>
+                  <strong>iOS</strong><br>
+                  Swift<br>
+                  SwiftUI<br>
+                  MVVM Architecture<br>
+                  UserDefaults (local persistence)<br>
+                  UNUserNotificationCenter (local notifications)<br>
+                  Swift Charts (data visualization)<br><br>
 
-  <strong>Android</strong><br>
-  Kotlin<br>
-  Jetpack Compose<br>
-  MVVM Architecture<br>
-  Local Notifications<br>
-  SharedPreferences / DataStore (local persistence)
-</p>
+                  <strong>Android</strong><br>
+                  Kotlin<br>
+                  Jetpack Compose<br>
+                  MVVM Architecture<br>
+                  Local Notifications<br>
+                  SharedPreferences / DataStore (local persistence)
+                </p>
 
-</div>
-              
+              </div>
             </div>
           </div>
         </div>
@@ -449,16 +447,14 @@
           <div class="collapse" id="notixTimeline">
             <div class="timeline-outer">
               <div id="notix-timeline"></div>
-
               <div id="notix-timeline-card-area" class="timeline-card-area"></div>
             </div>
           </div>
-
         </div>
 
       </div>
     </section>
-    
+
     <!-- ======================= TR3TA ======================= -->
     <section class="page-section" id="tr3ta-projects">
       <div class="container">
@@ -541,7 +537,6 @@
           <div class="collapse" id="tr3taTimeline">
             <div class="timeline-outer">
               <div id="tr3ta-timeline"></div>
-
               <div id="tr3ta-timeline-card-area" class="timeline-card-area"></div>
             </div>
           </div>
@@ -549,8 +544,6 @@
         </div>
       </div>
     </section>
-
-    
 
     <!-- Footer -->
     <footer class="footer text-center">
@@ -571,7 +564,6 @@
             <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/machittes/Portfolio" target="_blank">
               <i class="fab fa-github"></i>
             </a>
-
           </div>
         </div>
       </div>
