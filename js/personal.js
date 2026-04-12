@@ -313,6 +313,25 @@ const notixTimeline = [
   `
 },
 
+  {
+  date: "Apr 12, 2026",
+  title: "Android Launch",
+  text: `
+    <p>
+      NotixMe was officially released on Google Play, expanding the app to a broader audience
+      and establishing its presence as a cross-platform product.
+    </p>
+    <p>
+      The Android version delivers the same offline-first and privacy-focused experience,
+      ensuring consistency across both iOS and Android platforms.
+    </p>
+    <p>
+      At the same time, the iOS version received improvements focused on performance,
+      notification reliability, and overall user experience refinement.
+    </p>
+  `
+},
+
   
 ];
 
