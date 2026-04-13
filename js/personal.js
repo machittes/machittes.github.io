@@ -18,6 +18,7 @@ function buildTimeline(containerId, cardAreaId, data) {
 
   container.innerHTML = `
     <div class="timeline-container">
+      <div class="timeline-line"></div>
       ${data
         .map(
           (item, i) => `
@@ -65,6 +66,8 @@ function buildTimeline(containerId, cardAreaId, data) {
 
   function scrollToEnd() {
     if (!timelineScroller) return;
+    const line = timelineScroller.querySelector(".timeline-line");
+    if (line) line.style.width = timelineScroller.scrollWidth + "px";
     timelineScroller.scrollLeft = timelineScroller.scrollWidth;
   }
 
@@ -138,7 +141,7 @@ const tr3taTimeline = [
     title: "Pre-Game Flow",
     text: `
       <p>Beginning of Stage 3 (Pre-Game).</p>
-      <p>Added splash screen, home screen with “New Game,” and full pre-game setup flow.</p>
+      <p>Added splash screen, home screen with "New Game," and full pre-game setup flow.</p>
       <p>Match customization introduced (Classic or Aggressive mode).</p>
       <p>Anti-collusion rule implemented.</p>
       <p>Turn definition mechanic implemented — turn order is now randomized during pre-game.</p>
@@ -238,7 +241,7 @@ const notixTimeline = [
 
       <p><strong>Fix list:</strong></p>
       <ul>
-        <li>Advanced Mode reminders now update subtitle to “Advanced.”</li>
+        <li>Advanced Mode reminders now update subtitle to "Advanced."</li>
       </ul>
     `,
   },
@@ -281,7 +284,7 @@ const notixTimeline = [
       </p>
       <p>
         The app was officially <strong>submitted for App Store review</strong>,
-        following Apple’s best practices for privacy, metadata, screenshots,
+        following Apple's best practices for privacy, metadata, screenshots,
         accessibility, and notification handling.
       </p>
     `,
