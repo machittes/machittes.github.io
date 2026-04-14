@@ -101,14 +101,14 @@ const tr3taTimeline = [
     `,
   },
   {
-    date: "Dec/2024",
+    date: "Dec, 2024",
     title: "First App Prototype",
     text: `
       <p>First attempt to bring the game to mobile, initially for Android. Development of a virtual board identical to the physical version and early implementation of position markers.</p>
     `,
   },
   {
-    date: "03/10/2025",
+    date: "Oct 03, 2025",
     title: "iOS Migration",
     text: `
       <p>Project resumed and fully migrated to iOS.</p>
@@ -118,7 +118,7 @@ const tr3taTimeline = [
     `,
   },
   {
-    date: "20/10/2025",
+    date: "Oct 20, 2025",
     title: "Pieces & Movement",
     text: `
       <p>Completed design of all pieces, now updated to a round format.</p>
@@ -128,7 +128,7 @@ const tr3taTimeline = [
     `,
   },
   {
-    date: "08/11/2025",
+    date: "Nov 08, 2025",
     title: "Movement Polishing",
     text: `
       <p>Refinement of the <strong>movementHelper</strong>: pieces can now move forward and backward with visual indicators showing valid movement paths while respecting blocked cells.</p>
@@ -137,7 +137,7 @@ const tr3taTimeline = [
     `,
   },
   {
-    date: "15–17/11/2025",
+    date: "Nov 15–17, 2025",
     title: "Pre-Game Flow",
     text: `
       <p>Beginning of Stage 3 (Pre-Game).</p>
@@ -149,7 +149,7 @@ const tr3taTimeline = [
     `,
   },
   {
-    date: "15–19/12/2025",
+    date: "Dec 15–19, 2025",
     title: "Board Adjacency System",
     text: `
       <p>
@@ -187,7 +187,7 @@ const tr3taTimeline = [
 
 const notixTimeline = [
   {
-    date: "18/09/2025",
+    date: "Set 18, 2025",
     title: "Core Concept & First Implementation",
     text: `
       <p>Creation of the core concept and start of implementation.</p>
@@ -200,7 +200,7 @@ const notixTimeline = [
     `,
   },
   {
-    date: "24/09/2025",
+    date: "Set 24, 2025",
     title: "Recurrence, Snooze & Status Foundations",
     text: `
       <ul>
@@ -216,7 +216,7 @@ const notixTimeline = [
     `,
   },
   {
-    date: "30/09/2025",
+    date: "Set 30, 2025",
     title: "Simple Mode & Advanced Mode",
     text: `
       <p>Implemented quick reminders without additional settings, and created an Advanced Mode for extended customization.</p>
@@ -224,7 +224,7 @@ const notixTimeline = [
     `,
   },
   {
-    date: "14–15/10/2025",
+    date: "Oct 14–15, 2025",
     title: "Random Mode",
     text: `
       <p>Implemented Random Mode and tested repetition behavior.</p>
@@ -232,7 +232,7 @@ const notixTimeline = [
     `,
   },
   {
-    date: "03/11/2025",
+    date: "Nov 03, 2025",
     title: "Status System",
     text: `
       <p>Status added to each reminder: <strong>Scheduled</strong>, <strong>In Progress</strong>, <strong>Completed</strong>.</p>
@@ -246,14 +246,14 @@ const notixTimeline = [
     `,
   },
   {
-    date: "11/11/2025",
+    date: "Nov 11, 2025",
     title: "History & Statistics",
     text: `
       <p>Implemented alarm history and statistics. Pending correction system adjustments.</p>
     `,
   },
   {
-    date: "10–11/12/2025",
+    date: "Dec 10–11, 2025",
     title: "Categories, History & UX Improvements",
     text: `
       <p>
@@ -274,7 +274,7 @@ const notixTimeline = [
     `,
   },
   {
-    date: "07/01/2026",
+    date: "Jan 07, 2026",
     title: "App Store Submission & Final Fixes",
     text: `
       <p>
@@ -290,7 +290,7 @@ const notixTimeline = [
     `,
   },
   {
-    date: "Feb/2026",
+    date: "Feb, 2026",
     title: "Repositioning & Mindful Upgrade",
     text: `
       <p>
