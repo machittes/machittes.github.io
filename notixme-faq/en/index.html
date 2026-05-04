@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NotixMe – Frequently Asked Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #FCF9F2;
+      color: #1c1c1c;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 32px;
+    }
+
+    p, li {
+      margin-top: 12px;
+    }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 22px;
+    }
+
+    .muted {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .language-switcher {
+      margin-bottom: 28px;
+    }
+
+    .language-switcher label {
+      display: block;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .language-switcher select {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #1c1c1c;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="language-switcher">
+    <label for="language-select">Language</label>
+    <select id="language-select" onchange="location.href = this.value;">
+      <option value="../pt-br/">Português (Brasil)</option>
+      <option selected>English</option>
+      <option value="../es/">Español</option>
+    </select>
+  </div>
+
+  <h1>Frequently Asked Questions</h1>
+
+  <p>
+    This page answers the most common questions about using NotixMe.
+  </p>
+
+  <h2>Last updated</h2>
+  <p>May 2026</p>
+
+  <h2>What is NotixMe?</h2>
+  <p>
+    NotixMe is an app designed to help you create intentional moments throughout your day.
+    It allows you to configure local reminders with custom phrases, time ranges, and weekly patterns.
+  </p>
+
+  <h2>Does NotixMe require internet?</h2>
+  <p>
+    No. NotixMe works completely offline. Your settings, phrases, history, and preferences are stored locally on your device.
+  </p>
+
+  <h2>Does NotixMe collect my data?</h2>
+  <p>
+    No. NotixMe does not collect, store, or share personal data on external servers.
+    The app does not use accounts, login, analytics, tracking, or advertising.
+  </p>
+
+  <h2>Why am I not receiving notifications?</h2>
+  <p>
+    This can happen for several reasons:
+  </p>
+  <ul>
+    <li>Notifications are not allowed for the app in system settings.</li>
+    <li>Do Not Disturb or Focus mode is enabled.</li>
+    <li>The configured time range has not started yet or has already ended.</li>
+    <li>The system may be restricting background activity or notifications.</li>
+  </ul>
+  <p class="muted">
+    Check your device notification settings to make sure NotixMe is allowed to send notifications.
+  </p>
+
+  <h2>How do I use the snooze option?</h2>
+  <p>
+    When available, you can snooze a reminder directly from the notification.
+  </p>
+  <ul>
+    <li>
+      <strong>On iPhone:</strong> tap and hold the notification to view available actions.
+      If NotixMe provides a snooze option for that reminder, it will appear among the quick actions.
+    </li>
+    <li>
+      <strong>On Android:</strong> expand the notification by tapping the arrow or opening its details.
+      Some devices may also provide a built-in snooze option from the system.
+    </li>
+  </ul>
+  <p class="muted">
+    The appearance of these options may vary depending on the device, OS version, and notification settings.
+  </p>
+
+  <h2>What are persistent notifications?</h2>
+  <p>
+    Persistent notifications are notifications that do not disappear automatically after a few seconds.
+    Instead, they remain visible on the lock screen or notification center until you interact with them.
+  </p>
+  <p>
+    In NotixMe, this behavior can help keep reminders visible for longer, so you can come back to them when you're ready.
+  </p>
+  <ul>
+    <li>
+      <strong>On iPhone:</strong> this behavior depends on system notification settings, including banners, lock screen, notification center, and Focus modes.
+    </li>
+    <li>
+      <strong>On Android:</strong> the behavior may vary depending on the Android version, device manufacturer, and app notification settings.
+    </li>
+  </ul>
+  <p class="muted">
+    If notifications are disappearing too quickly, check your device’s notification settings for NotixMe.
+  </p>
+
+  <h2>How do reminders work?</h2>
+  <p>
+    You define a time range, the number of reminders, and the days of the week you want them.
+    NotixMe schedules local notifications based on these settings.
+  </p>
+
+  <h2>What is the difference between distributed and random reminders?</h2>
+  <p>
+    In distributed mode, notifications are spaced evenly within the selected time range.
+    In random mode, the app chooses different times within the configured period.
+  </p>
+  <p>
+    If the time range is too short for the number of reminders, the app may automatically adjust the distribution to avoid notifications being too close together.
+  </p>
+
+  <h2>Can I create my own phrases?</h2>
+  <p>
+    Yes. You can create, edit, and delete your own custom phrases inside the app.
+  </p>
+
+  <h2>Is my history saved?</h2>
+  <p>
+    Yes. Your history is stored locally on your device so you can track your reminders and interactions.
+  </p>
+  <p class="muted">
+    Since data is stored locally, deleting the app will remove all saved information.
+  </p>
+
+  <h2>Does NotixMe consume a lot of battery?</h2>
+  <p>
+    No. NotixMe uses local system notifications and does not rely on heavy background processes.
+  </p>
+
+  <h2>Can I use NotixMe on multiple devices?</h2>
+  <p>
+    NotixMe does not sync data across devices. Since everything is stored locally, each device has its own settings, phrases, and history.
+  </p>
+
+  <h2>How do I change the app language?</h2>
+  <p>
+    NotixMe follows your device language settings when available.
+  </p>
+
+  <h2>How can I contact support?</h2>
+  <p>
+    If you have questions, suggestions, or encounter any issues, you can contact:
+  </p>
+
+  <p>
+    <strong>Henrique Machitte</strong><br />
+    Email: machittes@gmail.com
+  </p>
+
+</body>
+</html>
