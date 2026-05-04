@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>NotixMe – Preguntas Frecuentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #FCF9F2;
+      color: #1c1c1c;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 32px;
+    }
+
+    p, li {
+      margin-top: 12px;
+    }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 22px;
+    }
+
+    .muted {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .language-switcher {
+      margin-bottom: 28px;
+    }
+
+    .language-switcher label {
+      display: block;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .language-switcher select {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #1c1c1c;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="language-switcher">
+    <label for="language-select">Idioma</label>
+    <select id="language-select" onchange="location.href = this.value;">
+      <option value="../pt-br/">Português (Brasil)</option>
+      <option value="../en/">English</option>
+      <option selected>Español</option>
+    </select>
+  </div>
+
+  <h1>Preguntas Frecuentes</h1>
+
+  <p>
+    Esta página responde a las preguntas más comunes sobre el uso de NotixMe.
+  </p>
+
+  <h2>Última actualización</h2>
+  <p>Mayo de 2026</p>
+
+  <h2>¿Qué es NotixMe?</h2>
+  <p>
+    NotixMe es una aplicación diseñada para ayudarte a crear momentos intencionales a lo largo del día.
+    Permite configurar recordatorios locales con frases personalizadas, rangos de horario y patrones semanales.
+  </p>
+
+  <h2>¿NotixMe necesita conexión a internet?</h2>
+  <p>
+    No. NotixMe funciona completamente sin conexión. Tus configuraciones, frases, historial y preferencias se almacenan localmente en tu dispositivo.
+  </p>
+
+  <h2>¿NotixMe recopila mis datos?</h2>
+  <p>
+    No. NotixMe no recopila, almacena ni comparte datos personales en servidores externos.
+    La aplicación no utiliza cuentas, inicio de sesión, analíticas, seguimiento ni publicidad.
+  </p>
+
+  <h2>¿Por qué no estoy recibiendo notificaciones?</h2>
+  <p>
+    Esto puede ocurrir por varias razones:
+  </p>
+  <ul>
+    <li>Las notificaciones no están permitidas para la app en la configuración del sistema.</li>
+    <li>El modo No molestar o Foco está activado.</li>
+    <li>El rango de horario configurado aún no ha comenzado o ya ha terminado.</li>
+    <li>El sistema puede estar restringiendo la actividad en segundo plano o las notificaciones.</li>
+  </ul>
+  <p class="muted">
+    Verifica la configuración de notificaciones de tu dispositivo para asegurarte de que NotixMe tiene permiso.
+  </p>
+
+  <h2>¿Cómo uso la opción de posponer un recordatorio?</h2>
+  <p>
+    Cuando esté disponible, puedes posponer un recordatorio directamente desde la notificación.
+  </p>
+  <ul>
+    <li>
+      <strong>En iPhone:</strong> mantén presionada la notificación para ver las acciones disponibles.
+      Si NotixMe ofrece la opción de posponer, aparecerá entre las acciones rápidas.
+    </li>
+    <li>
+      <strong>En Android:</strong> expande la notificación tocando la flecha o abriendo sus detalles.
+      Algunos dispositivos también pueden mostrar una opción propia del sistema para posponer.
+    </li>
+  </ul>
+  <p class="muted">
+    La apariencia de estas opciones puede variar según el dispositivo, la versión del sistema y la configuración de notificaciones.
+  </p>
+
+  <h2>¿Qué son las notificaciones persistentes?</h2>
+  <p>
+    Las notificaciones persistentes son aquellas que no desaparecen automáticamente después de unos segundos.
+    Permanecen visibles en la pantalla de bloqueo o en el centro de notificaciones hasta que interactúas con ellas.
+  </p>
+  <p>
+    En NotixMe, este comportamiento ayuda a mantener el recordatorio visible por más tiempo, para que puedas volver a él cuando lo necesites.
+  </p>
+  <ul>
+    <li>
+      <strong>En iPhone:</strong> este comportamiento depende de la configuración del sistema, como banners, pantalla de bloqueo, centro de notificaciones y modos de Foco.
+    </li>
+    <li>
+      <strong>En Android:</strong> el comportamiento puede variar según la versión de Android, el fabricante del dispositivo y la configuración de notificaciones.
+    </li>
+  </ul>
+  <p class="muted">
+    Si las notificaciones desaparecen demasiado rápido, revisa la configuración de notificaciones de NotixMe en tu dispositivo.
+  </p>
+
+  <h2>¿Cómo funcionan los recordatorios?</h2>
+  <p>
+    Defines un rango de horario, la cantidad de recordatorios y los días de la semana en los que deseas recibirlos.
+    NotixMe programa notificaciones locales basadas en estas configuraciones.
+  </p>
+
+  <h2>¿Cuál es la diferencia entre recordatorios distribuidos y aleatorios?</h2>
+  <p>
+    En el modo distribuido, las notificaciones se reparten de forma equilibrada dentro del intervalo seleccionado.
+    En el modo aleatorio, la app elige horarios diferentes dentro del período configurado.
+  </p>
+  <p>
+    Si el intervalo es demasiado corto para la cantidad de recordatorios, la app puede ajustar automáticamente la distribución para evitar que queden muy cerca entre sí.
+  </p>
+
+  <h2>¿Puedo crear mis propias frases?</h2>
+  <p>
+    Sí. Puedes crear, editar y eliminar tus propias frases personalizadas dentro de la app.
+  </p>
+
+  <h2>¿Se guarda mi historial?</h2>
+  <p>
+    Sí. El historial se guarda localmente en tu dispositivo para que puedas hacer seguimiento de tus recordatorios e interacciones.
+  </p>
+  <p class="muted">
+    Como los datos se almacenan localmente, eliminar la app también elimina toda la información guardada.
+  </p>
+
+  <h2>¿NotixMe consume mucha batería?</h2>
+  <p>
+    No. NotixMe utiliza notificaciones locales del sistema y no depende de procesos pesados en segundo plano.
+  </p>
+
+  <h2>¿Puedo usar NotixMe en varios dispositivos?</h2>
+  <p>
+    NotixMe no sincroniza datos entre dispositivos. Como todo se guarda localmente, cada dispositivo tiene sus propias configuraciones, frases e historial.
+  </p>
+
+  <h2>¿Cómo cambio el idioma de la app?</h2>
+  <p>
+    NotixMe utiliza el idioma configurado en tu dispositivo cuando está disponible.
+  </p>
+
+  <h2>¿Cómo puedo contactar soporte?</h2>
+  <p>
+    Si tienes preguntas, sugerencias o encuentras algún problema, puedes contactar:
+  </p>
+
+  <p>
+    <strong>Henrique Machitte</strong><br />
+    Email: machittes@gmail.com
+  </p>
+
+</body>
+</html>
