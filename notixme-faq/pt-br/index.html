@@ -38,9 +38,38 @@
       color: #555;
       font-size: 0.95rem;
     }
+
+    .language-switcher {
+      margin-bottom: 28px;
+    }
+
+    .language-switcher label {
+      display: block;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .language-switcher select {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #1c1c1c;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
+
+  <div class="language-switcher">
+    <label for="language-select">Idioma</label>
+    <select id="language-select" onchange="location.href = this.value;">
+      <option selected>Português (Brasil)</option>
+      <option value="../en/">English</option>
+      <option value="../es/">Español</option>
+    </select>
+  </div>
 
   <h1>Perguntas Frequentes</h1>
 
@@ -80,6 +109,44 @@
   </ul>
   <p class="muted">
     Verifique as permissões de notificação nas configurações do seu dispositivo.
+  </p>
+
+  <h2>Como uso a opção de adiar um lembrete?</h2>
+  <p>
+    Quando a opção estiver disponível, você pode adiar um lembrete diretamente pela notificação.
+  </p>
+  <ul>
+    <li>
+      <strong>No iPhone:</strong> toque e segure a notificação para ver as ações disponíveis.
+      Se o NotixMe oferecer a opção de adiar naquele lembrete, ela aparecerá entre as ações rápidas.
+    </li>
+    <li>
+      <strong>No Android:</strong> expanda a notificação tocando na seta ou abrindo os detalhes da notificação.
+      Em alguns aparelhos, o sistema também pode mostrar uma opção própria para adiar notificações.
+    </li>
+  </ul>
+  <p class="muted">
+    A aparência dessas opções pode variar conforme a versão do sistema, o modelo do aparelho e as configurações de notificação.
+  </p>
+
+  <h2>O que são notificações persistentes?</h2>
+  <p>
+    Notificações persistentes são notificações que não desaparecem sozinhas após alguns segundos.
+    Em vez disso, elas permanecem visíveis na tela bloqueada ou na central de notificações até que você interaja com elas.
+  </p>
+  <p>
+    No NotixMe, esse comportamento pode ajudar a manter o lembrete visível por mais tempo, para que você possa voltar a ele quando estiver pronto.
+  </p>
+  <ul>
+    <li>
+      <strong>No iPhone:</strong> esse comportamento depende das configurações de notificação do iOS, como banners, tela bloqueada, Central de Notificações e modos de Foco.
+    </li>
+    <li>
+      <strong>No Android:</strong> o comportamento pode variar conforme a versão do Android, o fabricante do aparelho e as configurações de notificação do app.
+    </li>
+  </ul>
+  <p class="muted">
+    Se as notificações estiverem desaparecendo rápido demais, verifique as configurações de notificação do NotixMe no seu dispositivo.
   </p>
 
   <h2>Como funcionam os lembretes?</h2>
