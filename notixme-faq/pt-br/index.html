@@ -20,11 +20,6 @@
       margin-bottom: 16px;
     }
 
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 32px;
-    }
-
     p, li {
       margin-top: 12px;
     }
@@ -58,6 +53,79 @@
       color: #1c1c1c;
       font-size: 1rem;
     }
+
+    /* ── Accordion ── */
+    .faq-list {
+      margin-top: 28px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e0ddd8;
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid #e0ddd8;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 18px 0;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1c1c1c;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+
+    .faq-question:hover {
+      color: #000;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #1c1c1c;
+      color: #FCF9F2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1;
+      transition: transform 0.25s ease, background-color 0.2s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background-color: #555;
+    }
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      padding: 0;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 600px;
+      padding-bottom: 20px;
+    }
+
+    .faq-answer p:first-child,
+    .faq-answer ul:first-child {
+      margin-top: 0;
+    }
   </style>
 </head>
 <body>
@@ -68,139 +136,190 @@
       <option selected>Português (Brasil)</option>
       <option value="../en/">English</option>
       <option value="../es/">Español</option>
+      <option value="https://machittes.github.io/notixme-faq/zh/index.html">简体中文</option>
     </select>
   </div>
 
   <h1>Perguntas Frequentes</h1>
 
-  <p>
-    Esta página responde às dúvidas mais comuns sobre o uso do NotixMe.
-  </p>
+  <p>Esta página responde às dúvidas mais comuns sobre o uso do NotixMe.</p>
 
-  <h2>Última atualização</h2>
-  <p>Maio de 2026</p>
+  <p class="muted">Última atualização: maio de 2026</p>
 
-  <h2>O que é o NotixMe?</h2>
-  <p>
-    O NotixMe é um aplicativo criado para ajudar você a criar momentos intencionais ao longo do dia.
-    Ele permite configurar lembretes locais com frases personalizadas, horários definidos e padrões semanais.
-  </p>
+  <div class="faq-list">
 
-  <h2>O NotixMe precisa de internet?</h2>
-  <p>
-    Não. O NotixMe funciona de forma offline. As configurações, frases, histórico e preferências ficam salvas localmente no seu dispositivo.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        O que é o NotixMe?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>O NotixMe é um aplicativo criado para ajudar você a criar momentos intencionais ao longo do dia. Ele permite configurar lembretes locais com frases personalizadas, horários definidos e padrões semanais.</p>
+      </div>
+    </div>
 
-  <h2>O NotixMe coleta meus dados?</h2>
-  <p>
-    Não. O NotixMe não coleta, armazena ou compartilha dados pessoais em servidores externos.
-    O app não usa conta, login, analytics, rastreamento ou publicidade.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        O NotixMe precisa de internet?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Não. O NotixMe funciona de forma offline. As configurações, frases, histórico e preferências ficam salvas localmente no seu dispositivo.</p>
+      </div>
+    </div>
 
-  <h2>Por que minhas notificações não estão aparecendo?</h2>
-  <p>
-    Isso pode acontecer por alguns motivos:
-  </p>
-  <ul>
-    <li>As notificações do app não foram permitidas no sistema.</li>
-    <li>O modo Não Perturbe ou Foco está ativado.</li>
-    <li>O horário configurado para os lembretes ainda não começou ou já terminou.</li>
-    <li>O sistema pode estar restringindo notificações ou atividade em segundo plano.</li>
-  </ul>
-  <p class="muted">
-    Verifique as permissões de notificação nas configurações do seu dispositivo.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        O NotixMe coleta meus dados?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Não. O NotixMe não coleta, armazena ou compartilha dados pessoais em servidores externos. O app não usa conta, login, analytics, rastreamento ou publicidade.</p>
+      </div>
+    </div>
 
-  <h2>Como uso a opção de adiar um lembrete?</h2>
-  <p>
-    Quando a opção estiver disponível, você pode adiar um lembrete diretamente pela notificação.
-  </p>
-  <ul>
-    <li>
-      <strong>No iPhone:</strong> toque e segure a notificação para ver as ações disponíveis.
-      Se o NotixMe oferecer a opção de adiar naquele lembrete, ela aparecerá entre as ações rápidas.
-    </li>
-    <li>
-      <strong>No Android:</strong> expanda a notificação tocando na seta ou abrindo os detalhes da notificação.
-      Em alguns aparelhos, o sistema também pode mostrar uma opção própria para adiar notificações.
-    </li>
-  </ul>
-  <p class="muted">
-    A aparência dessas opções pode variar conforme a versão do sistema, o modelo do aparelho e as configurações de notificação.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Por que minhas notificações não estão aparecendo?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Isso pode acontecer por alguns motivos:</p>
+        <ul>
+          <li>As notificações do app não foram permitidas no sistema.</li>
+          <li>O modo Não Perturbe ou Foco está ativado.</li>
+          <li>O horário configurado para os lembretes ainda não começou ou já terminou.</li>
+          <li>O sistema pode estar restringindo notificações ou atividade em segundo plano.</li>
+        </ul>
+        <p class="muted">Verifique as permissões de notificação nas configurações do seu dispositivo.</p>
+      </div>
+    </div>
 
-  <h2>O que são notificações persistentes?</h2>
-  <p>
-    Notificações persistentes são notificações que não desaparecem sozinhas após alguns segundos.
-    Em vez disso, elas permanecem visíveis na tela bloqueada ou na central de notificações até que você interaja com elas.
-  </p>
-  <p>
-    No NotixMe, esse comportamento pode ajudar a manter o lembrete visível por mais tempo, para que você possa voltar a ele quando estiver pronto.
-  </p>
-  <ul>
-    <li>
-      <strong>No iPhone:</strong> esse comportamento depende das configurações de notificação do iOS, como banners, tela bloqueada, Central de Notificações e modos de Foco.
-    </li>
-    <li>
-      <strong>No Android:</strong> o comportamento pode variar conforme a versão do Android, o fabricante do aparelho e as configurações de notificação do app.
-    </li>
-  </ul>
-  <p class="muted">
-    Se as notificações estiverem desaparecendo rápido demais, verifique as configurações de notificação do NotixMe no seu dispositivo.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Como uso a opção de adiar um lembrete?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Quando a opção estiver disponível, você pode adiar um lembrete diretamente pela notificação.</p>
+        <ul>
+          <li><strong>No iPhone:</strong> toque e segure a notificação para ver as ações disponíveis. Se o NotixMe oferecer a opção de adiar naquele lembrete, ela aparecerá entre as ações rápidas.</li>
+          <li><strong>No Android:</strong> expanda a notificação tocando na seta ou abrindo os detalhes da notificação. Em alguns aparelhos, o sistema também pode mostrar uma opção própria para adiar notificações.</li>
+        </ul>
+        <p class="muted">A aparência dessas opções pode variar conforme a versão do sistema, o modelo do aparelho e as configurações de notificação.</p>
+      </div>
+    </div>
 
-  <h2>Como funcionam os lembretes?</h2>
-  <p>
-    Você define um intervalo de tempo, a quantidade de lembretes e os dias da semana em que deseja recebê-los.
-    O NotixMe agenda notificações locais com base nessas configurações.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        O que são notificações persistentes?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Notificações persistentes são notificações que não desaparecem sozinhas após alguns segundos. Em vez disso, elas permanecem visíveis na tela bloqueada ou na central de notificações até que você interaja com elas.</p>
+        <p>No NotixMe, esse comportamento pode ajudar a manter o lembrete visível por mais tempo, para que você possa voltar a ele quando estiver pronto.</p>
+        <ul>
+          <li><strong>No iPhone:</strong> esse comportamento depende das configurações de notificação do iOS, como banners, tela bloqueada, Central de Notificações e modos de Foco.</li>
+          <li><strong>No Android:</strong> o comportamento pode variar conforme a versão do Android, o fabricante do aparelho e as configurações de notificação do app.</li>
+        </ul>
+        <p class="muted">Se as notificações estiverem desaparecendo rápido demais, verifique as configurações de notificação do NotixMe no seu dispositivo.</p>
+      </div>
+    </div>
 
-  <h2>Qual é a diferença entre lembretes distribuídos e aleatórios?</h2>
-  <p>
-    Nos lembretes distribuídos, o app espalha as notificações de forma equilibrada dentro do intervalo escolhido.
-    No modo aleatório, o app escolhe horários variados dentro do período configurado.
-  </p>
-  <p>
-    Quando o intervalo é muito curto para a quantidade de lembretes escolhida, o app pode ajustar a distribuição automaticamente para evitar notificações muito próximas.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Como funcionam os lembretes?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Você define um intervalo de tempo, a quantidade de lembretes e os dias da semana em que deseja recebê-los. O NotixMe agenda notificações locais com base nessas configurações.</p>
+      </div>
+    </div>
 
-  <h2>Posso criar minhas próprias frases?</h2>
-  <p>
-    Sim. Você pode criar, editar e remover frases personalizadas dentro do app.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Qual é a diferença entre lembretes distribuídos e aleatórios?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nos lembretes distribuídos, o app espalha as notificações de forma equilibrada dentro do intervalo escolhido. No modo aleatório, o app escolhe horários variados dentro do período configurado.</p>
+        <p>Quando o intervalo é muito curto para a quantidade de lembretes escolhida, o app pode ajustar a distribuição automaticamente para evitar notificações muito próximas.</p>
+      </div>
+    </div>
 
-  <h2>O histórico fica salvo?</h2>
-  <p>
-    Sim. O histórico fica salvo localmente no seu dispositivo para ajudar você a acompanhar seus lembretes e interações.
-  </p>
-  <p class="muted">
-    Como os dados são locais, apagar o app também remove as informações salvas no dispositivo.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Posso criar minhas próprias frases?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim. Você pode criar, editar e remover frases personalizadas dentro do app.</p>
+      </div>
+    </div>
 
-  <h2>O NotixMe consome muita bateria?</h2>
-  <p>
-    Não. O NotixMe usa notificações locais do próprio sistema e não depende de processos pesados em segundo plano.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        O histórico fica salvo?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim. O histórico fica salvo localmente no seu dispositivo para ajudar você a acompanhar seus lembretes e interações.</p>
+        <p class="muted">Como os dados são locais, apagar o app também remove as informações salvas no dispositivo.</p>
+      </div>
+    </div>
 
-  <h2>Posso usar o NotixMe em mais de um dispositivo?</h2>
-  <p>
-    O NotixMe não sincroniza dados entre dispositivos. Como tudo é salvo localmente, cada dispositivo mantém suas próprias configurações, frases e histórico.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        O NotixMe consome muita bateria?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Não. O NotixMe usa notificações locais do próprio sistema e não depende de processos pesados em segundo plano.</p>
+      </div>
+    </div>
 
-  <h2>Como altero o idioma do app?</h2>
-  <p>
-    O idioma do NotixMe segue as configurações de idioma do seu dispositivo, quando disponível.
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Posso usar o NotixMe em mais de um dispositivo?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>O NotixMe não sincroniza dados entre dispositivos. Como tudo é salvo localmente, cada dispositivo mantém suas próprias configurações, frases e histórico.</p>
+      </div>
+    </div>
 
-  <h2>Como entro em contato?</h2>
-  <p>
-    Se você tiver dúvidas, sugestões ou encontrar algum problema, entre em contato:
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Como altero o idioma do app?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>O idioma do NotixMe segue as configurações de idioma do seu dispositivo, quando disponível.</p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Henrique Machitte</strong><br />
-    Email: machittes@gmail.com
-  </p>
+    <div class="faq-item">
+      <button class="faq-question">
+        Como entro em contato?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p><strong>Henrique Machitte</strong><br />Email: machittes@gmail.com</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
