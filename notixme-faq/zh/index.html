@@ -1,1 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <title>NotixMe – 常见问题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+      background-color: #FCF9F2;
+      color: #1c1c1c;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 16px;
+    }
+
+    p, li {
+      margin-top: 12px;
+    }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 22px;
+    }
+
+    .muted {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .language-switcher {
+      margin-bottom: 28px;
+    }
+
+    .language-switcher label {
+      display: block;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .language-switcher select {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #1c1c1c;
+      font-size: 1rem;
+    }
+
+    /* ── Accordion ── */
+    .faq-list {
+      margin-top: 28px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e0ddd8;
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid #e0ddd8;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 18px 0;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1c1c1c;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+
+    .faq-question:hover {
+      color: #000;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #1c1c1c;
+      color: #FCF9F2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1;
+      transition: transform 0.25s ease, background-color 0.2s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background-color: #555;
+    }
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      padding: 0;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 600px;
+      padding-bottom: 20px;
+    }
+
+    .faq-answer p:first-child,
+    .faq-answer ul:first-child {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="language-switcher">
+    <label for="language-select">语言</label>
+    <select id="language-select" onchange="location.href = this.value;">
+      <option value="../pt-br/">Português (Brasil)</option>
+      <option value="../en/">English</option>
+      <option value="../es/">Español</option>
+      <option selected>简体中文</option>
+    </select>
+  </div>
+
+  <h1>常见问题</h1>
+
+  <p>本页面解答关于使用 NotixMe 的常见问题。</p>
+
+  <p class="muted">最后更新：2026年5月</p>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        NotixMe 是什么？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>NotixMe 是一款帮助您在日常生活中创造专注时刻的应用。您可以配置带有自定义句子、时间范围和每周计划的本地提醒。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        NotixMe 需要网络连接吗？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>不需要。NotixMe 完全离线运行。您的设置、句子、历史记录和偏好均存储在设备本地。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        NotixMe 会收集我的数据吗？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>不会。NotixMe 不会在外部服务器上收集、存储或共享个人数据。该应用不使用账户、登录、分析、追踪或广告。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        为什么我没有收到通知？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>这可能有以下几种原因：</p>
+        <ul>
+          <li>系统设置中未允许该应用发送通知。</li>
+          <li>开启了勿扰模式或专注模式。</li>
+          <li>配置的时间范围尚未开始或已经结束。</li>
+          <li>系统可能正在限制后台活动或通知。</li>
+        </ul>
+        <p class="muted">请检查设备的通知设置，确保 NotixMe 被允许发送通知。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        如何使用延后功能？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>在支持的情况下，您可以直接从通知中延后提醒。</p>
+        <ul>
+          <li><strong>iPhone：</strong>长按通知以查看可用操作。如果 NotixMe 为该提醒提供了延后选项，它将出现在快捷操作中。</li>
+          <li><strong>Android：</strong>点击箭头或打开通知详情以展开通知。部分设备也可能提供系统内置的延后选项。</li>
+        </ul>
+        <p class="muted">这些选项的显示方式可能因设备、系统版本和通知设置而有所不同。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        什么是持久通知？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>持久通知是指不会在几秒后自动消失的通知。它们会持续显示在锁屏或通知中心，直到您与其互动为止。</p>
+        <p>在 NotixMe 中，这一特性可以让提醒保持更长时间的可见性，方便您随时查看。</p>
+        <ul>
+          <li><strong>iPhone：</strong>此行为取决于系统通知设置，包括横幅、锁屏、通知中心和专注模式。</li>
+          <li><strong>Android：</strong>行为可能因 Android 版本、设备厂商和应用通知设置而有所不同。</li>
+        </ul>
+        <p class="muted">如果通知消失得太快，请检查设备中 NotixMe 的通知设置。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        提醒是如何工作的？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>您设定时间范围、提醒次数以及希望接收提醒的星期几。NotixMe 根据这些设置安排本地通知。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        均匀分布和随机提醒有什么区别？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>均匀分布模式下，通知会在所选时间范围内等间隔发送。随机模式下，应用会在配置的时间段内随机选择不同的时间点。</p>
+        <p>如果时间范围对于提醒次数来说过短，应用可能会自动调整分布，以避免通知间隔过近。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        我可以创建自己的句子吗？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>可以。您可以在应用内创建、编辑和删除自定义句子。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        我的历史记录会被保存吗？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>会的。您的历史记录存储在设备本地，方便您追踪提醒和互动情况。</p>
+        <p class="muted">由于数据存储在本地，删除应用将会清除所有已保存的信息。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        NotixMe 耗电量大吗？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>不大。NotixMe 使用系统本地通知，不依赖耗电的后台进程。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        我可以在多台设备上使用 NotixMe 吗？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>NotixMe 不会跨设备同步数据。由于所有内容均存储在本地，每台设备都有各自独立的设置、句子和历史记录。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        如何更改应用语言？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>NotixMe 在可用时会跟随设备的语言设置。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        如何联系支持？
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p><strong>Henrique Machitte</strong><br />电子邮件：machittes@gmail.com</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
